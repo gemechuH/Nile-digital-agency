@@ -8,6 +8,7 @@ import PostGallery from '../pages/blogs/PostGallery'
 import StandardPost from '../pages/blogs/StandardPost'
 import Services from '../pages/Services'
 import Projects from '../pages/Projects'
+import AboutUs from '../pages/pages/AboutUs'
 
 // import '../styles/App.css'  
 const AppRoutes = () => {
@@ -22,6 +23,7 @@ const AppRoutes = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog/gallery" element={<PostGallery />} />
         <Route path="/blog/standard" element={<StandardPost />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
 
       <Footer />
