@@ -1,4 +1,4 @@
-/* Base Styles */
+Base Styles
 :root {
   --primary-color: #0066ff;
   --text-color: #333;
@@ -8,7 +8,7 @@
   --transition: all 0.3s ease;
 }
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,9 +18,9 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-}
+} */
 
-a {
+/* a {
   text-decoration: none;
   color: inherit;
 }
@@ -28,7 +28,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 /* Layout */
 .projects-container {

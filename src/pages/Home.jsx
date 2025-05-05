@@ -142,145 +142,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-          >
-            {/* Video Section with 3D Effect */}
-            <Tilt
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
-              perspective={2000}
-              scale={1.02}
-              transitionSpeed={2000}
-              className="aspect-video rounded-xl overflow-hidden shadow-2xl bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-1"
-            >
-              <div className="relative w-full h-full rounded-xl overflow-hidden backdrop-blur-sm">
-                <iframe
-                  width="914"
-                  height="514"
-                  src="https://www.youtube.com/embed/HPCW_CSKy3o"
-                  title="Our Services at 📲 Nile Technology Solutions"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="w-full h-full object-cover"
-                ></iframe>
-              </div>
-            </Tilt>
-
-            {/* Content Section */}
-            <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-6"
-            >
-              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
-                Innovation Meets Excellence
-              </h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8 backdrop-blur-sm">
-                At Nile Technology Solutions, we're driven by innovation and
-                committed to delivering excellence. Our journey began with a
-                vision to transform businesses through cutting-edge technology
-                solution.
-              </p>
-
-              {/* CEO Card with Glass Effect */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="bg-gradient-to-r from-gray-800/50 to-gray-800/30 backdrop-blur-md p-6 rounded-xl mb-8 border border-gray-700/50"
-              >
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="relative">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
-                    <img
-                      src="https://niletech.co/wp-content/uploads/2024/09/ANWAR.jpg"
-                      alt="CEO Name"
-                      className="relative w-16 h-16 rounded-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">Anwar Mohammed</h3>
-                    <p className="text-blue-400">Founder & CEO</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 italic">
-                  "Our mission is to empower businesses with innovative digital
-                  solutions that drive growth and success in the modern world."
-                </p>
-              </motion.div>
-
-              {/* Enhanced Button */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-blue-500"
-              >
-                <span className="absolute inset-0 bg-white/20 group-hover:bg-transparent transition-colors"></span>
-                <span className="absolute right-0 translate-x-full transition-transform group-hover:-translate-x-4">
-                  <FaRocket className="animate-pulse" />
-                </span>
-                <span className="text-sm font-medium transition-all group-hover:mr-4">
-                  Meet Our Leadership Team
-                </span>
-              </motion.button>
-            </motion.div>
-          </motion.div>
-
-          {/* Vision, Mission, Values Cards */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            {[
-              {
-                icon: FaRocket,
-                title: "Our Vision",
-                text: "To be the leading technology solutions provider in Africa",
-              },
-              {
-                icon: FaChartLine,
-                title: "Our Mission",
-                text: "Delivering innovative solutions that transform businesses",
-              },
-              {
-                icon: FaShieldAlt,
-                title: "Our Values",
-                text: "Innovation, Integrity, Excellence, Customer Focus",
-              },
-            ].map((item, index) => (
-              <Tilt
-                key={index}
-                tiltMaxAngleX={15}
-                tiltMaxAngleY={15}
-                perspective={3000}
-                scale={1.02}
-                transitionSpeed={2000}
-              >
-                <motion.div
-                  whileHover={{ y: -10 }}
-                  className="text-center p-8 rounded-xl bg-gradient-to-b from-gray-800/50 to-gray-800/30 backdrop-blur-md border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-                >
-                  <div className="text-blue-400 text-4xl mb-4 transform hover:scale-110 transition-transform">
-                    <item.icon />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-300">{item.text}</p>
-                </motion.div>
-              </Tilt>
-            ))}
-          </motion.div>
-        </div>
       </section>
       <div className="relative w-full h-32 overflow-hidden">
         <div className="absolute w-full h-full">
@@ -524,6 +385,144 @@ const Home = () => {
       </section>
 
       {/* After the impact section and before the end */}
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
+          {/* Video Section with 3D Effect */}
+          <Tilt
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
+            perspective={2000}
+            scale={1.02}
+            transitionSpeed={2000}
+            className="aspect-video rounded-xl overflow-hidden shadow-2xl bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-1"
+          >
+            <div className="relative w-full h-full rounded-xl overflow-hidden backdrop-blur-sm">
+              <iframe
+                width="914"
+                height="514"
+                src="https://www.youtube.com/embed/HPCW_CSKy3o"
+                title="Our Services at 📲 Nile Technology Solutions"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="w-full h-full object-cover"
+              ></iframe>
+            </div>
+          </Tilt>
+
+          {/* Content Section */}
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-6"
+          >
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
+              Innovation Meets Excellence
+            </h2>
+            <p className="text-gray-300 text-lg leading-relaxed mb-8 backdrop-blur-sm">
+              At Nile Technology Solutions, we're driven by innovation and
+              committed to delivering excellence. Our journey began with a
+              vision to transform businesses through cutting-edge technology
+              solution.
+            </p>
+
+            {/* CEO Card with Glass Effect */}
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="bg-gradient-to-r from-gray-800/50 to-gray-800/30 backdrop-blur-md p-6 rounded-xl mb-8 border border-gray-700/50"
+            >
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+                  <img
+                    src="https://niletech.co/wp-content/uploads/2024/09/ANWAR.jpg"
+                    alt="CEO Name"
+                    className="relative w-16 h-16 rounded-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Anwar Mohammed</h3>
+                  <p className="text-blue-400">Founder & CEO</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">
+                "Our mission is to empower businesses with innovative digital
+                solutions that drive growth and success in the modern world."
+              </p>
+            </motion.div>
+
+            {/* Enhanced Button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative inline-flex items-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-blue-500"
+            >
+              <span className="absolute inset-0 bg-white/20 group-hover:bg-transparent transition-colors"></span>
+              <span className="absolute right-0 translate-x-full transition-transform group-hover:-translate-x-4">
+                <FaRocket className="animate-pulse" />
+              </span>
+              <span className="text-sm font-medium transition-all group-hover:mr-4">
+                Meet Our Leadership Team
+              </span>
+            </motion.button>
+          </motion.div>
+        </motion.div>
+
+        {/* Vision, Mission, Values Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          {[
+            {
+              icon: FaRocket,
+              title: "Our Vision",
+              text: "To be the leading technology solutions provider in Africa",
+            },
+            {
+              icon: FaChartLine,
+              title: "Our Mission",
+              text: "Delivering innovative solutions that transform businesses",
+            },
+            {
+              icon: FaShieldAlt,
+              title: "Our Values",
+              text: "Innovation, Integrity, Excellence, Customer Focus",
+            },
+          ].map((item, index) => (
+            <Tilt
+              key={index}
+              tiltMaxAngleX={15}
+              tiltMaxAngleY={15}
+              perspective={3000}
+              scale={1.02}
+              transitionSpeed={2000}
+            >
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="text-center p-8 rounded-xl bg-gradient-to-b from-gray-800/50 to-gray-800/30 backdrop-blur-md border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+              >
+                <div className="text-blue-400 text-4xl mb-4 transform hover:scale-110 transition-transform">
+                  <item.icon />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  {item.title}
+                </h3>
+                <p className="text-gray-300">{item.text}</p>
+              </motion.div>
+            </Tilt>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 };
