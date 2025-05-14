@@ -1,0 +1,30 @@
+/* src/assets/css/custom.css */
+
+/* Ensure particle canvas is visible */
+#hero-particles {
+  z-index: 0 !important;
+}
+
+/* Align Bootstrap container with Tailwind */
+.container {
+  max-width: 1280px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Prioritize Tailwind background colors */
+.bg-gray-900 {
+  background-color: #111827 !important;
+}
+
+/* Ensure Tailwind gradients work on buttons */
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #60a5fa, #a78bfa) !important;
+}
+
+/* Fix service card styling */
+.rounded-xl {
+  border-radius: 0.75rem !important;
+}
