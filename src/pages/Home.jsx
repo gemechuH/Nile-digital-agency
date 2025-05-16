@@ -135,7 +135,7 @@ const Home = () => {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute bg-blue-500 rounded-full opacity-10"
+            className="absolute bg-blue-950 rounded-full opacity-10"
             style={{
               width: Math.random() * 100 + 50,
               height: Math.random() * 100 + 50,
