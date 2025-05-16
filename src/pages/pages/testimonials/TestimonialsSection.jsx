@@ -1,7 +1,7 @@
 import TestimonialCard from "./TestimonialCard";
 import css from "../../../styles/styles.module.css";
 import user1 from "../../../assets/image/user1.png";
-import user2 from "../../../assets/image/user2.png";
+import user2 from "../../../assets/image/user2.jpg";
 import user3 from "../../../assets/image/user3.png";
 import user4 from "../../../assets/image/user4.png";
 import user5 from "../../../assets/image/user5.png";
@@ -12,7 +12,7 @@ const testimonialData = [
     content:
       "They understood our brand and created a stunning website design. Professional, responsive, and on-time delivery. Highly recommended!",
     image: user1,
-    name: "Allan Collins",
+    name: "Abiy Adams",
     role: "Managing Director",
   },
   {
@@ -20,7 +20,7 @@ const testimonialData = [
     content:
       "Efficient, reliable, and results-oriented. Visually appealing website, improved online visibility. Highly recommended!",
     image: user2,
-    name: "Tanya Grant",
+    name: "Baysa Tolasa",
     role: "Ceo & Founder",
   },
   {
@@ -28,7 +28,7 @@ const testimonialData = [
     content:
       "Best decision we made. Stunning website, exceptional support. Always available and prompt issue resolution. Hassle-free experience!",
     image: user3,
-    name: "Clay Washington",
+    name: "Tadase Adeyemi",
     role: "Fashion Designer",
     scroll,
   },
@@ -37,7 +37,7 @@ const testimonialData = [
     content:
       "Their creative approach and attention to detail transformed our online presence. The website perfectly captures our brand essence. Outstanding service!",
     image: user4,
-    name: "Sarah Martinez",
+    name: "Sarah Ahamd",
     role: "Marketing Director",
   },
   {
@@ -45,7 +45,7 @@ const testimonialData = [
     content:
       "Exceptional team that delivers beyond expectations. The website's performance and design have significantly improved our customer engagement. Truly remarkable!",
     image: user5,
-    name: "Michael Chen",
+    name: "Michael Elias",
     role: "Tech Entrepreneur",
   },
 ];
