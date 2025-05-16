@@ -280,7 +280,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
             >
               <div className="text-5xl font-bold text-blue-400 mb-4 flex items-center justify-center">
-                <AnimatedCounter value={200} isVisible={statsInView} />
+                <AnimatedCounter value={30} isVisible={statsInView} />
                 <span className="text-blue-400">+</span>
               </div>
               <h4 className="text-xl font-semibold text-blue-300 mb-2">
@@ -301,7 +301,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
             >
               <div className="text-5xl font-bold text-purple-400 mb-4 flex items-center justify-center">
-                <AnimatedCounter value={50} isVisible={statsInView} />
+                <AnimatedCounter value={10} isVisible={statsInView} />
                 <span className="text-purple-400">+</span>
               </div>
               <h4 className="text-xl font-semibold text-purple-300 mb-2">
