@@ -1,5 +1,4 @@
-Service Container
-* {
+Service Container * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,13 +12,69 @@ Service Container
   display: flex;
   gap: 0;
   overflow: hidden;
+  position: relative;
+}
+
+.service-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00dbde, #d7dde5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Service Header */
 .service-header {
   width: 50%;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
+  
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -75,6 +130,9 @@ Service Container
   transition: all 0.4s ease;
   cursor: pointer;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 3rem;
@@ -212,5 +270,10 @@ Service Container
 
   .service-card p {
     font-size: 0.95rem;
+  }
+
+  .learn-more-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 }

@@ -8,132 +8,184 @@ const projectCategories = [
   "UI/UX Design",
   "Digital Marketing",
   "AI Solutions",
-  "School Systems",
-  "E-commerce",
+  
 ];
 
 const projectData = [
+  // Web Development Projects (14)
   {
     id: 1,
-    title: "E-Commerce Platform",
-    category: "E-commerce",
+    title: "E-commerce Marketplace",
+    category: "Web Development",
     image:
-      "https://unsplash.com/photos/photo-of-woman-holding-white-and-black-paper-bags-_3Q3tsJ01nc",
-    description: "Modern e-commerce solution with seamless UX",
+      "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3",
+    description: "Multi-vendor marketplace platform",
     detailedDescription:
-      "Built with microservices. Handles 10k+ daily transactions.",
+      "Built with microservices architecture, supporting 100+ vendors and 50k+ products.",
     technologies: ["React", "Node.js", "MongoDB", "Redis", "Docker"],
-    duration: "4 months",
-    client: "Retail Company",
+    duration: "6 months",
+    client: "Regional Marketplace",
     featured: true,
   },
   {
     id: 2,
-    title: "E-Commerce Platform",
-    category: "E-commerce",
-    image: "https://unsplash.com/photos/man-in-green-jacket-walking-on-sidewalk-during-daytime-BTKF6G-O8fU",
-    description: "Modern e-commerce solution with seamless UX",
+    title: "School Management System",
+    category: "Web Development",
+    image:
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3",
+    description: "Comprehensive education management platform",
     detailedDescription:
-      "Built with microservices. Handles 10k+ daily transactions.",
-    technologies: ["React", "Node.js", "MongoDB", "Redis", "Docker"],
-    duration: "4 months",
-    client: "Retail Company",
+      "Complete school management system with attendance, grades, and parent portal.",
+    technologies: ["React", "Python", "Django", "PostgreSQL"],
+    duration: "5 months",
+    client: "Local Education Authority",
     featured: true,
   },
   {
     id: 3,
-    title: "Fitness Tracking App",
-    category: "Mobile Apps",
-    image: "https://via.placeholder.com/400x300?text=Fitness+App",
-    description: "Track fitness & health goals",
-    detailedDescription: "Mobile app to track workouts, nutrition, and goals.",
-    technologies: ["React Native", "Firebase"],
-    duration: "3 months",
-    client: "Fitness Startup",
-    featured: false,
+    title: "Hospital Management System",
+    category: "Web Development",
+    image:
+      "https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3",
+    description: "Healthcare management solution",
+    detailedDescription:
+      "Integrated hospital management system with patient records and appointment scheduling.",
+    technologies: ["Angular", "Spring Boot", "MySQL"],
+    duration: "8 months",
+    client: "Regional Hospital",
+    featured: true,
   },
   {
     id: 4,
-    title: "Fitness Tracking App",
+    title: "Real Estate Platform",
+    category: "Web Development",
+    image:
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3",
+    description: "Property listing and management",
+    detailedDescription:
+      "Advanced real estate platform with virtual tours and agent portals.",
+    technologies: ["Next.js", "Node.js", "MongoDB"],
+    duration: "4 months",
+    client: "Real Estate Agency",
+    featured: false,
+  },
+  // ... Add 10 more web development projects with similar structure
+
+  // Mobile Apps (4)
+  {
+    id: 15,
+    title: "Food Delivery App",
     category: "Mobile Apps",
-    image: "https://via.placeholder.com/400x300?text=Fitness+App",
-    description: "Track fitness & health goals",
-    detailedDescription: "Mobile app to track workouts, nutrition, and goals.",
-    technologies: ["React Native", "Firebase"],
-    duration: "3 months",
-    client: "Fitness Startup",
-    featured: false,
+    image:
+      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3",
+    description: "On-demand food delivery solution",
+    detailedDescription:
+      "Full-featured food delivery app with real-time tracking.",
+    technologies: ["React Native", "Firebase", "Google Maps API"],
+    duration: "4 months",
+    client: "Restaurant Chain",
+    featured: true,
   },
   {
-    id: 2,
-    title: "Fitness Tracking App",
+    id: 16,
+    title: "Fitness Tracker",
     category: "Mobile Apps",
-    image: "https://via.placeholder.com/400x300?text=Fitness+App",
-    description: "Track fitness & health goals",
-    detailedDescription: "Mobile app to track workouts, nutrition, and goals.",
-    technologies: ["React Native", "Firebase"],
+    image:
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3",
+    description: "Personal fitness tracking app",
+    detailedDescription:
+      "Comprehensive fitness tracking with AI-powered recommendations.",
+    technologies: ["Flutter", "Firebase", "TensorFlow Lite"],
     duration: "3 months",
-    client: "Fitness Startup",
+    client: "Fitness Company",
     featured: false,
   },
+  // ... Add 2 more mobile app projects
+
+  // Digital Marketing (4)
   {
-    id: 5,
-    title: "Corporate Website Redesign",
-    category: "UI/UX Design",
-    image: "https://via.placeholder.com/400x300?text=Corporate+Design",
-    description: "UX-focused website overhaul",
-    detailedDescription: "Revamped UI for better conversion & engagement.",
-    technologies: ["Figma", "Adobe XD"],
-    duration: "2 months",
-    client: "Corporate Client",
-    featured: false,
+    id: 19,
+    title: "Social Media Campaign",
+    category: "Digital Marketing",
+    image:
+      "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3",
+    description: "Integrated social media marketing",
+    detailedDescription: "Multi-platform social media campaign with analytics.",
+    technologies: ["Social Media Tools", "Analytics Platforms"],
+    duration: "3 months",
+    client: "Fashion Brand",
+    featured: true,
   },
   {
-    id: 6,
-    title: "Corporate Website Redesign",
-    category: "UI/UX Design",
-    image: "https://via.placeholder.com/400x300?text=Corporate+Design",
-    description: "UX-focused website overhaul",
-    detailedDescription: "Revamped UI for better conversion & engagement.",
-    technologies: ["Figma", "Adobe XD"],
-    duration: "2 months",
-    client: "Corporate Client",
+    id: 20,
+    title: "SEO Optimization",
+    category: "Digital Marketing",
+    image:
+      "https://images.unsplash.com/photo-1571786256017-aee7a0c009b6?ixlib=rb-4.0.3",
+    description: "Search engine optimization campaign",
+    detailedDescription:
+      "Comprehensive SEO strategy improving rankings by 200%.",
+    technologies: ["SEO Tools", "Google Analytics"],
+    duration: "6 months",
+    client: "E-commerce Client",
     featured: false,
   },
+  // ... Add 2 more digital marketing projects
+
+  // UI/UX Design (2)
   {
-    id: 7,
-    title: "Corporate Website Redesign",
+    id: 23,
+    title: "Banking App Design",
     category: "UI/UX Design",
-    image: "https://via.placeholder.com/400x300?text=Corporate+Design",
-    description: "UX-focused website overhaul",
-    detailedDescription: "Revamped UI for better conversion & engagement.",
-    technologies: ["Figma", "Adobe XD"],
+    image:
+      "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3",
+    description: "Modern banking application design",
+    detailedDescription: "User-centered design for digital banking platform.",
+    technologies: ["Figma", "Adobe XD", "Principle"],
     duration: "2 months",
-    client: "Corporate Client",
-    featured: false,
+    client: "National Bank",
+    featured: true,
   },
   {
-    id: 8,
-    title: "Corporate Website Redesign",
+    id: 24,
+    title: "Travel App Design",
     category: "UI/UX Design",
-    image: "https://via.placeholder.com/400x300?text=Corporate+Design",
-    description: "UX-focused website overhaul",
-    detailedDescription: "Revamped UI for better conversion & engagement.",
-    technologies: ["Figma", "Adobe XD"],
-    duration: "2 months",
-    client: "Corporate Client",
+    image:
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3",
+    description: "Travel planning app interface",
+    detailedDescription: "Intuitive travel app design with booking flow.",
+    technologies: ["Sketch", "InVision", "Zeplin"],
+    duration: "3 months",
+    client: "Travel Agency",
     featured: false,
   },
+
+  // AI Solutions (2)
   {
-    id: 9,
-    title: "Corporate Website Redesign",
-    category: "UI/UX Design",
-    image: "https://via.placeholder.com/400x300?text=Corporate+Design",
-    description: "UX-focused website overhaul",
-    detailedDescription: "Revamped UI for better conversion & engagement.",
-    technologies: ["Figma", "Adobe XD"],
-    duration: "2 months",
-    client: "Corporate Client",
+    id: 25,
+    title: "AI Chatbot",
+    category: "AI Solutions",
+    image:
+      "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3",
+    description: "Intelligent customer service bot",
+    detailedDescription: "NLP-powered chatbot handling 1000+ queries daily.",
+    technologies: ["Python", "TensorFlow", "NLP"],
+    duration: "4 months",
+    client: "Tech Company",
+    featured: true,
+  },
+  {
+    id: 26,
+    title: "Predictive Analytics",
+    category: "AI Solutions",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3",
+    description: "Business intelligence solution",
+    detailedDescription:
+      "ML-powered predictive analytics for business insights.",
+    technologies: ["Python", "Scikit-learn", "Power BI"],
+    duration: "5 months",
+    client: "Retail Chain",
     featured: false,
   },
 ];
@@ -163,7 +215,33 @@ export default function Projects() {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="min-h-screen relative overflow-hidden bg-gray-900">
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10"
+              style={{
+                width: Math.random() * 300 + 100,
+                height: Math.random() * 300 + 100,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -100, 0],
+                x: [0, Math.random() * 50 - 25, 0],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: Math.random() * 10 + 20,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
+      </div>
       {/* Hero */}
       <section className="bg-gradient-to-r from-indigo-800 to-blue-800 text-white py-24 text-center">
         <motion.div
