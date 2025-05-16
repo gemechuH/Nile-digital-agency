@@ -155,6 +155,32 @@ const Home = () => {
         ))}
       </div>
       <CarouselEffect />
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10"
+              style={{
+                width: Math.random() * 300 + 100,
+                height: Math.random() * 300 + 100,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -100, 0],
+                x: [0, Math.random() * 50 - 25, 0],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: Math.random() * 10 + 20,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
+      </div>
 
       <section ref={ref} className="py-24 relative z-10">
         <motion.div
@@ -436,7 +462,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.youtubeSection}>
+      {/* <section className={styles.youtubeSection}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Latest from Our Channel</h2>
           <div className={styles.videoWrapper}>
@@ -451,7 +477,7 @@ const Home = () => {
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
