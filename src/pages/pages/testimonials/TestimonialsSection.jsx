@@ -53,7 +53,7 @@ const testimonialData = [
 const TestimonialsSection = () => {
   return (
     <section className={css.section__container}>
-      <div className="absolute inset-0 min-h-screen overflow-hidden bg-gray-900">
+      {/* <div className="absolute inset-0 min-h-screen overflow-hidden bg-gray-900">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
             }}
           />
         ))}
-      </div>
+      </div> */}
       <h2>Testimonials</h2>
       <h1>What our customers say</h1>
       <div className={css.section__grid}>

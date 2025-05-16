@@ -131,7 +131,7 @@ const Home = () => {
   return (
     <div className={styles.homePage}>
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -153,9 +153,9 @@ const Home = () => {
             }}
           />
         ))}
-      </div>
+      </div> */}
       <CarouselEffect />
-      <div className="fixed inset-0 z-0">
+      {/* <div className="fixed inset-0 z-0">
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <motion.div
@@ -180,7 +180,7 @@ const Home = () => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
       <section ref={ref} className="py-24 relative z-10">
         <motion.div

@@ -216,7 +216,7 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gray-900">
-      <div className="fixed inset-0 z-0">
+      {/* <div className="fixed inset-0 z-0">
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <motion.div
@@ -241,7 +241,7 @@ export default function Projects() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
       {/* Hero */}
       <section className="bg-gradient-to-r from-indigo-800 to-blue-800 text-white py-24 text-center">
         <motion.div
