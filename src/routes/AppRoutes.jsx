@@ -11,6 +11,7 @@ import Projects from '../pages/Projects'
 import AboutUs from '../pages/pages/AboutUs'
 import About from '../pages/About'
 import TestimonialsSection from '../pages/pages/testimonials/TestimonialsSection'
+import OurClient from '../pages/pages/OurClient'
 
 // import '../styles/App.css'  
 const AppRoutes = () => {
@@ -27,6 +28,7 @@ const AppRoutes = () => {
         <Route path="/blog/standard" element={<StandardPost />} />
         <Route path="/about" element={<About />} />
         <Route path="/testimonials" element={<TestimonialsSection />} />
+          <Route path='/clients' element = {<OurClient/>} />
       </Routes>
 
       <Footer />

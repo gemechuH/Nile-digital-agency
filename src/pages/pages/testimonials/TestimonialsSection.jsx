@@ -5,6 +5,7 @@ import user2 from "../../../assets/image/user2.png";
 import user3 from "../../../assets/image/user3.png";
 import user4 from "../../../assets/image/user4.png";
 import user5 from "../../../assets/image/user5.png";
+import { motion, AnimatePresence } from "framer-motion";
 const testimonialData = [
   {
     title: "Love the simplicity",
@@ -52,6 +53,30 @@ const testimonialData = [
 const TestimonialsSection = () => {
   return (
     <section className={css.section__container}>
+      <div className="absolute inset-0 min-h-screen overflow-hidden bg-gray-900">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10"
+            style={{
+              width: Math.random() * 300 + 100,
+              height: Math.random() * 300 + 100,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -100, 0],
+              x: [0, Math.random() * 50 - 25, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: Math.random() * 10 + 20,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
       <h2>Testimonials</h2>
       <h1>What our customers say</h1>
       <div className={css.section__grid}>
