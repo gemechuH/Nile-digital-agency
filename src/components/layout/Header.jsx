@@ -26,7 +26,11 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/">
-            <img src="/logo.png" alt="Nile Digital Agency" className="h-10" />
+            <img
+              src="https://niletech.co/wp-content/uploads/2024/09/niles-logo.png"
+              alt="Nile Digital Agency"
+              className="h-10"
+            />
           </Link>
 
           <button
