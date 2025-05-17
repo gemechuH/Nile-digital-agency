@@ -15,7 +15,7 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: "John Doe",
+      name: "Anwar Mohammed",
       role: "CEO & Founder",
       image: "/assets/images/team/member1.jpg",
       description:
