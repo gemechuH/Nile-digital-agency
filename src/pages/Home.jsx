@@ -346,7 +346,7 @@ const Home = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text ">
             Our Process
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
@@ -360,7 +360,9 @@ const Home = () => {
                 Discovery
               </h3>
               <p className="text-gray-400">
-                Understanding your vision and goals
+                We start by deeply understanding your business goals,
+                challenges, and target audience to uncover the most effective
+                digital solutions.
               </p>
             </motion.div>
 
@@ -373,11 +375,11 @@ const Home = () => {
               <div className="text-4xl font-bold text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                 02
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                Strategy
-              </h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Define</h3>
               <p className="text-gray-400">
-                Crafting the perfect digital solution
+                Next, we outline a clear strategy, defining the scope,
+                objectives, and success metrics to ensure alignment with your
+                vision.
               </p>
             </motion.div>
 
@@ -390,11 +392,11 @@ const Home = () => {
               <div className="text-4xl font-bold text-green-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                 03
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                Implementation
-              </h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Design</h3>
               <p className="text-gray-400">
-                Bringing ideas to life with precision
+                We craft intuitive, user-centric designs that not only look
+                great but also provide seamless user experiences across all
+                platforms.
               </p>
             </motion.div>
 
@@ -407,9 +409,41 @@ const Home = () => {
               <div className="text-4xl font-bold text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                 04
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Launch</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Develop</h3>
               <p className="text-gray-400">
-                Delivering excellence with ongoing support
+                Our team of skilled developers brings the designs to life,
+                building robust, scalable, and high-performing solutions.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300 group"
+            >
+              <div className="text-4xl font-bold text-gray-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                05
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Deploy</h3>
+              <p className="text-gray-400">
+                Once developed, we rigorously test and deploy your solution,
+                ensuring everything runs smoothly in a live environment.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300 group"
+            >
+              <div className="text-4xl font-bold text-red-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                06
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Deliver</h3>
+              <p className="text-gray-400">
+                Finally, we deliver a fully optimized and functional product,
+                ready to drive results and support your business growth.
               </p>
             </motion.div>
           </div>
