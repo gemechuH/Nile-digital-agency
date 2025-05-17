@@ -19,23 +19,24 @@ const About = () => {
       role: "CEO & Founder",
       image: "/assets/images/team/member1.jpg",
       description:
-        "Visionary leader with 10+ years of digital innovation experience.",
+        "Leads the company's strategic vision and fosters a culture of innovation and growth.",
     },
     {
-      name: "Jane Smith",
-      role: "Creative Director",
+      name: "Abdulfetah Jemal - AJ",
+      role: "CTO and Co-Founder",
       image: "/assets/images/team/member2.jpg",
       description:
-        "Award-winning designer with a passion for user-centric solutions.",
+        "Oversees the company's technology direction and ensures scalable, secure, and high-performing systems.",
     },
     {
-      name: "Mike Johnson",
-      role: "Technical Lead",
+      name: "Exodus Gemechu",
+      role: "Social Media Manager",
       image: "/assets/images/team/member3.jpg",
       description:
-        "Expert in cutting-edge web technologies and development practices.",
+        "Manages brand presence across digital platforms and drives audience engagement through strategic content.",
     },
   ];
+  
 
   const values = [
     {

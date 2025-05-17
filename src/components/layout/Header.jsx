@@ -114,12 +114,12 @@ const Header = () => {
                 </div>
               </div>
 
-              <button
+              {/* <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
                 className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
                 {isDarkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
-              </button>
+              </button> */}
 
               <Link
                 to="/contact"

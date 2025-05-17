@@ -14,20 +14,23 @@ const Footer = () => {
               Fusce varius, dolor tempor interdum tristique, dui urna bibendum
               magna, ut ullamcorper purus
             </p>
-            <form className="flex flex-col sm:flex-row gap-2">
+            <form className="flex flex-col sm:flex-row gap-2 items-center">
               <input
                 type="email"
                 placeholder="Email address"
-                className="px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 h-10 sm:h-12 w-full sm:w-auto"
               />
-              <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg transition-colors">
+              <button
+                className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg transition-colors h-10 sm:h-12"
+                type="submit"
+              >
                 Subscribe
               </button>
             </form>
           </div>
 
           {/* Services Section */}
-          <div className="mb-8">
+          <div className="mb-8 ml-8">
             <h3 className="text-xl font-bold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>

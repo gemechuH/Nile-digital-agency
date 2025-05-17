@@ -44,14 +44,14 @@ const Service = () => {
   ];
 
   return (
-    <div className="service-container flex">
+    <div className="service-container flex ">
       <motion.div
         className="service-header mt-10"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1>Our Services</h1>
+        <h1 >Our Services</h1>
         <h2>Transforming Visions into Digital Reality</h2>
         <p>
           Empowering businesses with innovative digital solutions, leveraging
@@ -62,7 +62,7 @@ const Service = () => {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className="stat-item"
+              className="stat-item mt-1"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
