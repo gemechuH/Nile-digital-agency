@@ -3,20 +3,28 @@ import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaPhone, FaTelegram } from "react-icons/fa";
 
+
 const Header = () => {
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  
 
   const toggleDropdown = (dropdown) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-  const navLinkStyle =
-    "text-gray-800 hover:text-blue-500 font-medium transition-colors duration-300";
-  const mobileDropdownStyle =
-    "pl-4 py-2 text-gray-700 hover:text-blue-500 block";
+  
+   const navLinkStyle =
+     "text-gray-200 hover:text-blue-400 font-medium transition-colors duration-300";
+   const mobileDropdownStyle =
+     "pl-4 py-2 text-gray-300 hover:text-blue-400 block";
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -33,14 +41,11 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 shadow-lg fixed w-full z-50 transition-transform duration-300  ${
+      className={`bg-gradient-to-r from-blue-300 via-blue-900 to-blue-900 shadow-lg fixed w-full z-50 transition-transform duration-300  ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       {/* Top Bar with Contact Info */}
-      <div className="bg-black/30 text-white py-2 px-4">
-        <div className="container mx-auto flex justify-between items-center"></div>
-      </div>
 
       <nav className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
@@ -54,7 +59,7 @@ const Header = () => {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-gray-600 hover:text-blue-500"
+            className="lg:hidden text-white hover:text-gray-400"
           >
             {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -71,13 +76,21 @@ const Header = () => {
               <div
                 className={`lg:hidden ${isMenuOpen ? "block" : "hidden"} py-2 px-4`}
               >
-                <Link to="/" className="block py-2">
+                <Link to="/" className="block py-2" onClick={handleLinkClick}>
                   Home
                 </Link>
-                <Link to="/services" className="block py-2">
+                <Link
+                  to="/services"
+                  className="block py-2"
+                  onClick={handleLinkClick}
+                >
                   Services
                 </Link>
-                <Link to="/projects" className="block py-2">
+                <Link
+                  to="/projects"
+                  className="block py-2"
+                  onClick={handleLinkClick}
+                >
                   Projects
                 </Link>
 
@@ -95,13 +108,25 @@ const Header = () => {
                 </button>
                 {activeDropdown === "pages" && (
                   <div className="pl-4">
-                    <Link to="/about" className={mobileDropdownStyle}>
+                    <Link
+                      to="/about"
+                      className={mobileDropdownStyle}
+                      onClick={handleLinkClick}
+                    >
                       About Us
                     </Link>
-                    <Link to="/clients" className={mobileDropdownStyle}>
+                    <Link
+                      to="/clients"
+                      className={mobileDropdownStyle}
+                      onClick={handleLinkClick}
+                    >
                       Our Clients
                     </Link>
-                    <Link to="/testimonials" className={mobileDropdownStyle}>
+                    <Link
+                      to="/testimonials"
+                      className={mobileDropdownStyle}
+                      onClick={handleLinkClick}
+                    >
                       Testimonials
                     </Link>
                   </div>
@@ -121,10 +146,18 @@ const Header = () => {
                 </button>
                 {activeDropdown === "blog" && (
                   <div className="pl-4">
-                    <Link to="/blog/standard" className={mobileDropdownStyle}>
+                    <Link
+                      to="/blog/standard"
+                      className={mobileDropdownStyle}
+                      onClick={handleLinkClick}
+                    >
                       Standard Post
                     </Link>
-                    <Link to="/blog/gallery" className={mobileDropdownStyle}>
+                    <Link
+                      to="/blog/gallery"
+                      className={mobileDropdownStyle}
+                      onClick={handleLinkClick}
+                    >
                       Gallery Post
                     </Link>
                   </div>
@@ -197,6 +230,7 @@ const Header = () => {
               <Link
                 to="/contact"
                 className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 text-center mt-4 lg:mt-0"
+                onClick={handleLinkClick}
               >
                 Contact
               </Link>
