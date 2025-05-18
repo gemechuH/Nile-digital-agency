@@ -8,27 +8,27 @@ const CarouselEffect = () => {
   const slides = [
     {
       image: imgs[0],
-      // greating: "WELCOME TO",
-      // description:
-      //   "Digitalize your business with internationally validated solutions designed not only for efficiency and sustainability of operational processes, but also for scalability, growth, and alignment with your business priorities. Stop adapting to software, let the software adapt to you.",
-      // aboutUs: "About Us",
-      // lang: "English",
+      greating: "WELCOME TO",
+      description:
+        "Digitalize your business with internationally validated solutions designed not only for efficiency and sustainability of operational processes, but also for scalability, growth, and alignment with your business priorities. Stop adapting to software, let the software adapt to you.",
+      aboutUs: "About Us",
+      lang: "English",
     },
     {
       image: imgs[1],
-      // greating: "እንኳን በደህና መጡ",
-      // description:
-      //   "በአለም አቀፍ ደረጃ በተረጋገጡ መፍትሄዎች የንግድዎን ዲጂታላይዝ ያድርጉ፣ የተነደፉት ለስራ ሂደቶች ብቻ ሳይሆን ለእድገት፣ ለማስፋፋት እና ከንግድዎ ቅድሚያዎች ጋር ለማጣጣም ነው። ለሶፍትዌር መላመድ ያቁሙ፣ ሶፍትዌሩ ለእርስዎ ይላመድ።",
-      // aboutUs: "ስለ እኛ",
-      // lang: "Amharic",
+      greating: "እንኳን በደህና መጡ",
+      description:
+        "በአለም አቀፍ ደረጃ በተረጋገጡ መፍትሄዎች የንግድዎን ዲጂታላይዝ ያድርጉ፣ የተነደፉት ለስራ ሂደቶች ብቻ ሳይሆን ለእድገት፣ ለማስፋፋት እና ከንግድዎ ቅድሚያዎች ጋር ለማጣጣም ነው። ለሶፍትዌር መላመድ ያቁሙ፣ ሶፍትዌሩ ለእርስዎ ይላመድ።",
+      aboutUs: "ስለ እኛ",
+      lang: "Amharic",
     },
     {
       image: imgs[2],
-      // greating: "BAGA NAGAAN DHUFTAN",
-      // description:
-      //   "Daldalaa keessan furtuuwwan idil-addunyaatti mirkanaawaniin diijitaalaayizii godhaa, kan dizaayinii isaanii kan hojii adeemsa qofaaf osoo hin taane, guddina, bal'ina fi sagantaa daldala keessanii waliin wal simsiisuu dha. Softweeriif of madaqsuun dhaabaa, softweerin isin haa madaqu.",
-      // aboutUs: "Waa'ee Keenya",
-      // lang: "Afaan Oromo",
+      greating: "BAGA NAGAAN DHUFTAN",
+      description:
+        "Daldalaa keessan furtuuwwan idil-addunyaatti mirkanaawaniin diijitaalaayizii godhaa, kan dizaayinii isaanii kan hojii adeemsa qofaaf osoo hin taane, guddina, bal'ina fi sagantaa daldala keessanii waliin wal simsiisuu dha. Softweeriif of madaqsuun dhaabaa, softweerin isin haa madaqu.",
+      aboutUs: "Waa'ee Keenya",
+      lang: "Afaan Oromo",
     },
   ];
 
@@ -57,10 +57,10 @@ const CarouselEffect = () => {
             />
             <div className={classes.overlay}>
               <div className={classes.content}>
-                {/* <h3 className="text-3xl text-amber-50 font-bold opacity-70">{slide.greating}</h3> */}
+                <h3 className="text-3xl text-amber-50 font-bold opacity-70">{slide.greating}</h3>
                 <h2 className={classes.title}>NILE TECHNOLOGY SOLUTIONS</h2>
-                {/* <p className={classes.description}>{slide.description}</p> */}
-                {/* <button className={classes.aboutButton}>{slide.aboutUs}</button> */}
+                <p className={classes.description}>{slide.description}</p>
+                <button className={classes.aboutButton}>{slide.aboutUs}</button>
               </div>
             </div>
           </div>
