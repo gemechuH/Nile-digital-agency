@@ -38,7 +38,7 @@
 }
 
 .title {
-     background: linear-gradient(to right, #ffffff, #70e546);
+     background: linear-gradient(to right, #ffffff, #467be5);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -50,7 +50,7 @@
     padding-top: 80px;
 }
 .description {
-   color: white;
+   color: linear-gradient(to right, #ffffff, #70e546);
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 2rem;

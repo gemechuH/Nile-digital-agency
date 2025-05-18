@@ -5,6 +5,16 @@ import CarouselEffect from "../components/carousel/CarouselEffect";
 import styles from "./Home.module.css";
 import { useSpring, animated } from "@react-spring/web";
 import {
+  FaPhone,
+  FaEnvelope,
+  FaWhatsapp,
+  FaTelegram,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa";
+
+import {
   FaReact,
   FaNodeJs,
   FaPython,
@@ -54,7 +64,7 @@ const Home = () => {
   // Update the services array
   const services = [
     {
-      icon: <FaCode className="w-8 h-8" />,
+      icon: <FaCode className="w-8 h-8 text-white" />,
       techIcons: [
         <FaReact />,
         <FaNodeJs />,
@@ -67,28 +77,28 @@ const Home = () => {
       features: ["Custom Web Apps", "E-commerce Solutions", "API Development"],
     },
     {
-      icon: <FaMobile className="w-8 h-8" />,
+      icon: <FaMobile className="w-8 h-8 text-white" />,
       techIcons: [<FaReact />, <SiFirebase />, <FaPython />, <SiJavascript />],
       title: "Mobile Development",
       description: "Native and cross-platform mobile applications",
       features: ["iOS Development", "Android Apps", "React Native Solutions"],
     },
     {
-      icon: <FaRobot className="w-8 h-8" />,
+      icon: <FaRobot className="w-8 h-8 text-white" />,
       techIcons: [<FaPython />, <FaBrain />, <FaNodeJs />, <SiFirebase />],
       title: "Chatbot Development",
       description: "Intelligent chatbot solutions for business automation",
       features: ["AI-Powered Chatbots", "NLP Integration", "Custom Bot Logic"],
     },
     {
-      icon: <MdDesignServices className="w-8 h-8" />,
+      icon: <MdDesignServices className="w-8 h-8 text-white" />,
       techIcons: [<SiFigma />, <FaCode />, <SiTailwindcss />],
       title: "UI AND UX design",
       description: "Creating intuitive and engaging user experiences",
       features: ["User Research", "Wireframing", "Prototype Development"],
     },
     {
-      icon: <FaShieldAlt className="w-8 h-8" />,
+      icon: <FaShieldAlt className="w-8 h-8 text-white" />,
       techIcons: [<FaPython />, <FaCode />, <BiCodeAlt />, <FaShieldAlt />],
       title: "Cybersecurity",
       description:
@@ -100,7 +110,7 @@ const Home = () => {
       ],
     },
     {
-      icon: <FaBrain className="w-8 h-8" />,
+      icon: <FaBrain className="w-8 h-8 text-white" />,
       techIcons: [<FaPython />, <FaNodeJs />, <FaBrain />, <FaRobot />],
       title: "AI Solutions",
       description:
@@ -126,62 +136,136 @@ const Home = () => {
       image: "/assets/team/abdulmenan.jpg",
       quote: "Building tomorrow's technology today",
     },
+    {
+      name: "Abdulfetah Jemal(AJ",
+      role: "CTO and Co-Founder",
+      image: "/assets/team/abdulmenan.jpg",
+      quote: "Building tomorrow's technology today",
+    },
+    {
+      name: "Exodus Gemechu",
+      role: "Social Media Manager",
+      image: "/assets/team/abdulmenan.jpg",
+      quote: "Building tomorrow's technology today",
+    },
   ];
 
   return (
     <div className={styles.homePage}>
-      {/* Animated Background */}
-      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute bg-blue-950 rounded-full opacity-10"
-            style={{
-              width: Math.random() * 100 + 50,
-              height: Math.random() * 100 + 50,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, Math.random() * 100 - 50],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 10 + Math.random() * 10,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
-        ))}
-      </div> */}
       <CarouselEffect />
-      {/* <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10"
-              style={{
-                width: Math.random() * 300 + 100,
-                height: Math.random() * 300 + 100,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -100, 0],
-                x: [0, Math.random() * 50 - 25, 0],
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                duration: Math.random() * 10 + 20,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-          ))}
-        </div>
-      </div> */}
 
+      <section className="py-16 relative z-10 bg-gradient-to-b from-gray-900/50 to-gray-800/50 backdrop-blur-lg">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8 }}
+          className="container mx-auto px-4"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Get in Touch
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Direct Contact */}
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+            >
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Direct Contact
+              </h3>
+
+              <div className="space-y-4">
+                <a
+                  href="tel:+251912345678"
+                  className="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition-colors"
+                >
+                  <FaPhone className="text-xl" />
+                  <span>+251 91 234 5678</span>
+                </a>
+
+                <a
+                  href="mailto:info@niletechnology.com"
+                  className="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition-colors"
+                >
+                  <FaEnvelope className="text-xl" />
+                  <span>info@niletechnology.com</span>
+                </a>
+
+                <a
+                  href="https://wa.me/251912345678"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 text-gray-300 hover:text-green-400 transition-colors"
+                >
+                  <FaWhatsapp className="text-xl" />
+                  <span>WhatsApp Us</span>
+                </a>
+
+                <a
+                  href="https://t.me/niletechnology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition-colors"
+                >
+                  <FaTelegram className="text-xl" />
+                  <span>Telegram</span>
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Social Media */}
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300"
+            >
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Follow Us
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+                <a
+                  href="https://linkedin.com/company/nile-technology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-gray-300 hover:text-blue-500 transition-colors p-3 rounded-lg hover:bg-gray-700/30"
+                >
+                  <FaLinkedin className="text-2xl" />
+                  <span>LinkedIn</span>
+                </a>
+
+                <a
+                  href="https://twitter.com/niletechnology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors p-3 rounded-lg hover:bg-gray-700/30"
+                >
+                  <FaTwitter className="text-2xl" />
+                  <span>Twitter</span>
+                </a>
+
+                <a
+                  href="https://instagram.com/niletechnology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-gray-300 hover:text-pink-500 transition-colors p-3 rounded-lg hover:bg-gray-700/30"
+                >
+                  <FaInstagram className="text-2xl" />
+                  <span>Instagram</span>
+                </a>
+
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors p-3 rounded-lg bg-blue-500/10 hover:bg-blue-500/20"
+                  onClick={() => (window.location.href = "/contact")}
+                >
+                  <span>More Ways →</span>
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
       <section ref={ref} className="py-24 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -189,7 +273,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text ">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-300 to-purple-500 bg-clip-text rounded">
             Our Digital Excellence
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -258,7 +342,7 @@ const Home = () => {
 
       <section
         ref={statsRef}
-        className="py-20 relative z-10 bg-gradient-to-b from-gray-900/50 to-gray-800/50 backdrop-blur-lg"
+        className="py-14 relative z-10 bg-gradient-to-b from-gray-900/50 to-gray-800/50 backdrop-blur-lg"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -266,7 +350,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text rounded">
             Our Impact in Numbers
           </h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -346,15 +430,6 @@ const Home = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text ">
             OUR 6-D PROCESS
           </h2>
-          <p className="text-lg md:text-xl text-center mb-16 max-w-3xl mx-auto text-gray-700">
-            We <strong className="text-blue-500">Discover</strong>,{" "}
-            <strong className="text-purple-500">Define</strong>,{" "}
-            <strong className="text-blue-500">Design</strong>,
-            <strong className="text-purple-500"> Develop</strong>,{" "}
-            <strong className="text-blue-500">Deploy</strong>, and{" "}
-            <strong className="text-purple-500">Deliver</strong> to transform
-            your digital vision into reality.
-          </p>
 
           <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
@@ -366,10 +441,10 @@ const Home = () => {
               <div className="text-4xl font-bold text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                 01
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-blue-500 mb-2">
                 Discovery
               </h3>
-              <p className="text-gray-400">
+              <p className="text-gray-300">
                 We start by deeply understanding your business goals,
                 challenges, and target audience to uncover the most effective
                 digital solutions.
@@ -385,8 +460,10 @@ const Home = () => {
               <div className="text-4xl font-bold text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                 02
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Define</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl font-semibold text-purple-500 mb-2">
+                Define
+              </h3>
+              <p className="text-gray-300">
                 Next, we outline a clear strategy, defining the scope,
                 objectives, and success metrics to ensure alignment with your
                 vision.
@@ -402,8 +479,10 @@ const Home = () => {
               <div className="text-4xl font-bold text-green-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                 03
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Design</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl font-semibold text-green-500 mb-2">
+                Design
+              </h3>
+              <p className="text-gray-300">
                 We craft intuitive, user-centric designs that not only look
                 great but also provide seamless user experiences across all
                 platforms.
@@ -419,8 +498,10 @@ const Home = () => {
               <div className="text-4xl font-bold text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                 04
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Develop</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl font-semibold text-yellow-400 mb-2">
+                Develop
+              </h3>
+              <p className="text-gray-300">
                 Our team of skilled developers brings the designs to life,
                 building robust, scalable, and high-performing solutions.
               </p>
@@ -434,8 +515,10 @@ const Home = () => {
               <div className="text-4xl font-bold text-gray-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                 05
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Deploy</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">
+                Deploy
+              </h3>
+              <p className="text-gray-300">
                 Once developed, we rigorously test and deploy your solution,
                 ensuring everything runs smoothly in a live environment.
               </p>
@@ -450,8 +533,10 @@ const Home = () => {
               <div className="text-4xl font-bold text-red-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                 06
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Deliver</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl font-semibold text-red-400 mb-2">
+                Deliver
+              </h3>
+              <p className="text-gray-300">
                 Finally, we deliver a fully optimized and functional product,
                 ready to drive results and support your business growth.
               </p>
