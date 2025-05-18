@@ -344,8 +344,18 @@ const Home = () => {
           className="container mx-auto px-4"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text ">
-            Our Process
+            OUR 6-D PROCESS
           </h2>
+          <p className="text-lg md:text-xl text-center mb-16 max-w-3xl mx-auto text-gray-700">
+            We <strong className="text-blue-500">Discover</strong>,{" "}
+            <strong className="text-purple-500">Define</strong>,{" "}
+            <strong className="text-blue-500">Design</strong>,
+            <strong className="text-purple-500"> Develop</strong>,{" "}
+            <strong className="text-blue-500">Deploy</strong>, and{" "}
+            <strong className="text-purple-500">Deliver</strong> to transform
+            your digital vision into reality.
+          </p>
+
           <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
