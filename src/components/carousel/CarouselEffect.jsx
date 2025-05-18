@@ -57,7 +57,7 @@ const CarouselEffect = () => {
             />
             <div className={classes.overlay}>
               <div className={classes.content}>
-                <h2 className="text-2xl text-amber-50 font-bold opacity-70">{slide.greating}</h2>
+                <h2>{slide.greating}</h2>
                 <h2 className={classes.title}>NILE TECHNOLOGY SOLUTIONS</h2>
                 <p className={classes.description}>{slide.description}</p>
                 <button className={classes.aboutButton}>{slide.aboutUs}</button>
