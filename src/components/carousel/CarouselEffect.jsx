@@ -57,8 +57,12 @@ const CarouselEffect = () => {
             />
             <div className={classes.overlay}>
               <div className={classes.content}>
-                <h2>{slide.greating}</h2>
-                <h2 className={classes.title}>NILE TECHNOLOGY SOLUTIONS</h2>
+                <h2 className={classes.greeting}>{slide.greating}</h2>
+                <h2 className={classes.title}>
+                  <span className={classes.titleText}>NILE</span>{" "}
+                  <span className={classes.titleText}>TECHNOLOGY</span>{" "}
+                  <span className={classes.titleText}>SOLUTIONS</span>
+                </h2>
                 <p className={classes.description}>{slide.description}</p>
                 <button className={classes.aboutButton}>{slide.aboutUs}</button>
               </div>
