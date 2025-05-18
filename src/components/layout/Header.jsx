@@ -41,18 +41,18 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-gradient-to-r from-blue-300 via-blue-900 to-blue-900 shadow-lg fixed w-full z-50 transition-transform duration-300  ${
+      className={`bg-gradient-to-r from-blue-300 via-indigo-700 to-blue-900 shadow-lg fixed w-full z-50 transition-transform duration-300  ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       {/* Top Bar with Contact Info */}
 
-      <nav className="container mx-auto px-4 py-3">
+      <nav className="container mx-auto px-4 py-3 ">
         <div className="flex items-center justify-between">
           <Link to="/">
             <img
-              src="/assets/images/logo.png"
-              alt="Nile Digital Agency"
+              src="
+              //niletech.co/wp-content/uploads/2024/09/niles-logo.png"
               className="h-12"
             />
           </Link>
@@ -65,9 +65,9 @@ const Header = () => {
           </button>
 
           <div
-            className={`lg:flex lg:items-center lg:space-x-6 ${
+            className={`lg:flex lg:items-center lg:space-x-6  ${
               isMenuOpen
-                ? "absolute top-full left-0 w-full bg-white shadow-lg"
+                ? "absolute top-full left-0 w-full bg-white shadow-lg bg-gradient-to-r from-blue-300 via-indigo-700 to-blue-900"
                 : "hidden"
             } lg:relative lg:bg-transparent lg:shadow-none`}
           >
@@ -97,7 +97,7 @@ const Header = () => {
                 {/* Pages Dropdown Mobile */}
                 <button
                   onClick={() => toggleDropdown("pages")}
-                  className="w-full text-left py-2 flex justify-between items-center"
+                  className="w-full text-left py-2 flex justify-between items-center "
                 >
                   Pages
                   <span
