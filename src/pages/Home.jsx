@@ -137,7 +137,7 @@ const Home = () => {
       quote: "Building tomorrow's technology today",
     },
     {
-      name: "Abdulfetah Jemal(AJ",
+      name: "Abdulfetah Jemal(AJ)",
       role: "CTO and Co-Founder",
       image: "/assets/team/abdulmenan.jpg",
       quote: "Building tomorrow's technology today",
