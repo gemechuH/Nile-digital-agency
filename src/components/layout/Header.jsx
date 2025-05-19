@@ -19,8 +19,8 @@ const Header = () => {
   };
 
   const navLinkStyle =
-    "text-black hover:text-white font-medium transition-colors duration-300";
-  const mobileDropdownStyle = "pl-4 py-1 text-black hover:text-white block";
+    "text-white hover:text-red font-medium transition-colors duration-300";
+  const mobileDropdownStyle = "pl-4 py-1 text-white hover:text-purple block";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-gradient-to-r from-black via-indigo-300 to-blue-900 shadow-lg fixed w-full z-50 transition-transform duration-300 ${
+      className={`bg-gradient-to-b from-gray-900 to-gray-800 text-white shadow-lg fixed w-full z-50 transition-transform duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -47,7 +47,7 @@ const Header = () => {
           <Link to="/">
             <img
               src="//niletech.co/wp-content/uploads/2024/09/niles-logo.png"
-              className="h-12 text-white bg-transparent rounded-full"
+              className="h-12 text-white bg-white rounded-full p-1 border-2 border-white"
             />
           </Link>
 
@@ -61,9 +61,9 @@ const Header = () => {
           <div
             className={`${
               isMenuOpen
-                ? "absolute top-full left-0 w-full bg-white shadow-lg bg-gradient-to-r from-blue-300 via-indigo-700 to-blue-900"
+                ? "absolute top-full left-0 w-full bg-gradient-to-b from-gray-900 to-gray-800 text-white"
                 : "hidden"
-            } lg:flex lg:items-center lg:space-x-6 text-black lg:relative lg:bg-transparent lg:shadow-none`}
+            } lg:flex lg:items-center lg:space-x-6 text-white lg:relative lg:bg-transparent lg:shadow-none`}
           >
             <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-6">
               {/* Mobile Menu */}
