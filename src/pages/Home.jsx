@@ -241,7 +241,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white bg-clip-text rounded">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600 text-white bg-clip-text rounded">
             Our Impact in Numbers
           </h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -318,7 +318,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white bg-clip-text rounded ">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600 text-white bg-clip-text rounded ">
             OUR 6-D PROCESS
           </h2>
 
@@ -444,7 +444,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white bg-clip-text">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600 bg-clip-text">
             Meet Our Team
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -542,8 +542,15 @@ const Home = () => {
       </section>
       <section className={`${styles.cta} ${isVisible ? styles.visible : ""}`}>
         <div className={styles.container}>
-          <h2>Ready to Transform Your Digital Presence?</h2>
-          <p>Let's create something extraordinary together</p>
+          <h2 className="text-4xl font-bold mb-4">
+            Ready to Transform Your Digital Presence?
+          </h2>
+          <p className="text-lg mb-6 ">
+            Let’s create something extraordinary together — your success starts
+            here. With innovative solutions tailored to your vision, the
+            possibilities are endless. Click below and let's build the future of
+            your business!
+          </p>
           <Link to="/contact">
             {" "}
             <button className={styles.ctaButton}>Get Started</button>

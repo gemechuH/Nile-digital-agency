@@ -19,23 +19,23 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Contact Information Section */}
           <div className="mb-8">
-            <h3 className="text-2xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text  text-black rounded-xl">
+            <h3 className="text-2xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text  text-white rounded-xl">
               Contact Us
             </h3>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <FaPhone className="text-blue-400" />
                 <a
-                  href="tel:+251912345678"
+                  href="tel:+251915137219"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
-                  +251 91 234 5678
+                  +251915137219
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-blue-400" />
                 <a
-                  href="mailto:info@niletechnology.com"
+                  href="mailto:info@niletech.co"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   info@niletech.co
@@ -70,7 +70,7 @@ const Footer = () => {
 
           {/* Services Section */}
           <div className="mb-8">
-            <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text rounded-xl text-black text-center">
+            <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text rounded-xl text-white text-center">
               Our Services
             </h3>
             <ul className="space-y-2">
@@ -106,9 +106,7 @@ const Footer = () => {
                   Search Engine Optimization
                 </Link>
               </li>
-              <li>
-                
-              </li>
+              <li></li>
               <li>
                 <Link
                   to="/services"
@@ -122,7 +120,7 @@ const Footer = () => {
 
           {/* Resources Section */}
           <div className="mb-8">
-            <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text rounded-xl text-black text-center">
+            <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text rounded-xl text-white text-center">
               Resources
             </h3>
             <ul className="space-y-2">
@@ -171,7 +169,7 @@ const Footer = () => {
 
           {/* Newsletter Section */}
           <div className="mb-8">
-            <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text rounded-xl text-black text-center">
+            <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text rounded-xl text-white text-center">
               Stay Connected
             </h3>
             <p className="text-gray-400 mb-4">
@@ -184,7 +182,7 @@ const Footer = () => {
                 className="px-4 py-3 rounded-lg bg-gray-800/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-700/50"
               />
               <button
-                className="bg-gradient-to-r text-amber-200 from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r font-bold text-2xl text-red-200 from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
                 type="submit"
               >
                 Subscribe
