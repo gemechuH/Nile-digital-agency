@@ -32,6 +32,7 @@ import {
 } from "react-icons/si";
 import { BiCodeAlt } from "react-icons/bi";
 import { MdDesignServices } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -44,6 +45,7 @@ const Home = () => {
       config: { duration },
       
     });
+    
 
     return <animated.span>{number.to((n) => Math.floor(n))}</animated.span>;
   };
@@ -153,7 +155,30 @@ const Home = () => {
   return (
     <div className={styles.homePage}>
       <CarouselEffect />
-
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute bg-blue-500 rounded-full opacity-10"
+            style={{
+              width: Math.random() * 100 + 50,
+              height: Math.random() * 100 + 50,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              x: [0, Math.random() * 100 - 50],
+              y: [0, Math.random() * 100 - 50],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 10 + Math.random() * 10,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          />
+        ))}
+      </div>
       <section ref={ref} className="py-24 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -161,7 +186,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-300 to-purple-500 bg-clip-text rounded">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white bg-clip-text rounded">
             Our Digital Excellence
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -238,7 +263,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text rounded">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white bg-clip-text rounded">
             Our Impact in Numbers
           </h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -315,7 +340,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text rounded ">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white bg-clip-text rounded ">
             OUR 6-D PROCESS
           </h2>
 
@@ -441,7 +466,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white bg-clip-text">
             Meet Our Team
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -471,14 +496,6 @@ const Home = () => {
         </motion.div>
       </section>
 
-      <section className={`${styles.cta} ${isVisible ? styles.visible : ""}`}>
-        <div className={styles.container}>
-          <h2>Ready to Transform Your Digital Presence?</h2>
-          <p>Let's create something extraordinary together</p>
-          <button className={styles.ctaButton}>Get Started</button>
-        </div>
-      </section>
-
       {/* YouTube and CEO Section */}
       <section className="py-24 relative z-10">
         <motion.div
@@ -487,7 +504,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text rounded">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white bg-clip-text rounded">
             About Our Leadership
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -544,6 +561,16 @@ const Home = () => {
             </motion.div>
           </div>
         </motion.div>
+      </section>
+      <section className={`${styles.cta} ${isVisible ? styles.visible : ""}`}>
+        <div className={styles.container}>
+          <h2>Ready to Transform Your Digital Presence?</h2>
+          <p>Let's create something extraordinary together</p>
+          <Link to="/contact">
+            {" "}
+            <button className={styles.ctaButton}>Get Started</button>
+          </Link>
+        </div>
       </section>
     </div>
   );

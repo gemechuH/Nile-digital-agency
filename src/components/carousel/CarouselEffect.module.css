@@ -1,16 +1,31 @@
 .carousel_container {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     position: relative;
     overflow: hidden;
 }
+.ctaButton {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+  animation: pulse 2s infinite;
+}
 
 .carousel {
-    height: 100%;
+    height: 100vh;
 }
 
 .slide {
-    height: 80vh;
+    height: 100vh;
     position: relative;
 }
 .titleText {
@@ -47,7 +62,7 @@
     text-shadow: none;
     transform: translateY(-10px);
     animation: fadeInUp 0.8s forwards;
-    padding-top: 80px;
+    padding-top: 8px;
 }
 .description {
    color: linear-gradient(to right, #ffffff, #70e546);
@@ -72,8 +87,9 @@
 .greeting {
     color: white;
     font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    margin-top: 6rem;
+    text-shadow: 2px 2px 4px rgba(51, 148, 240, 0.5);
 }
 .content {
     /* display: flex;
@@ -157,6 +173,9 @@
         padding: 0 20px;
         text-align: center;
     }
+    .greeting{
+        margin-top: 1rem;
+    }
     .carousel_container {
         height: 100vh;
     }
@@ -181,7 +200,7 @@
     .description {
         font-size: 1rem;
         line-height: 1.4;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         padding: 0 10px;
     }
 
@@ -193,7 +212,7 @@
     .overlay {
         display: flex;
         align-items: center;
-        padding-top: 60px;
+        padding-top: 40px;
     }
 }
 @media (max-width: 480px) {

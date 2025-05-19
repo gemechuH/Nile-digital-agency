@@ -3,6 +3,7 @@ import { imgs } from "./img/data";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import classes from "./CarouselEffect.module.css";
+import { Link } from "react-router-dom";
 
 const CarouselEffect = () => {
   const slides = [
@@ -57,14 +58,22 @@ const CarouselEffect = () => {
             />
             <div className={classes.overlay}>
               <div className={classes.content}>
-                <h2 className={classes.greeting}>{slide.greating}</h2>
+                <h3 className={classes.greeting}>{slide.greating}</h3>
                 <h2 className={classes.title}>
                   <span className={classes.titleText}>NILE</span>{" "}
                   <span className={classes.titleText}>TECHNOLOGY</span>{" "}
                   <span className={classes.titleText}>SOLUTIONS</span>
                 </h2>
+                <h3 className="text-3xl text-white md:text-5xl p-6 font-bold mb-6 text-center">
+                  Transforming Ideas into Digital Reality
+                  
+                </h3>
                 <p className={classes.description}>{slide.description}</p>
                 <button className={classes.aboutButton}>{slide.aboutUs}</button>
+                <Link to="/contact">
+                  {" "}
+                  <button className={classes.ctaButton}>Get Started</button>
+                </Link>
               </div>
             </div>
           </div>

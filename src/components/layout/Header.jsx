@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaPhone, FaTelegram } from "react-icons/fa";
+import '../../styles/header.css'
 
 const Header = () => {
   const handleLinkClick = () => {
@@ -63,7 +64,7 @@ const Header = () => {
               isMenuOpen
                 ? "absolute top-full left-0 w-full bg-gradient-to-b from-gray-900 to-gray-800 text-white"
                 : "hidden"
-            } lg:flex lg:items-center lg:space-x-6 text-white lg:relative lg:bg-transparent lg:shadow-none`}
+            } lg:flex lg:items-center lg:space-x-6 text-red lg:relative lg:bg-transparent lg:shadow-none`}
           >
             <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-6">
               {/* Mobile Menu */}
@@ -182,22 +183,22 @@ const Header = () => {
                     Pages
                     <span className="ml-1">▼</span>
                   </button>
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
                     <Link
                       to="/about"
-                      className="block px-4 py-2 hover:bg-gray-100"
+                      className="block px-4 py-2 hover:text-blue-600"
                     >
                       About Us
                     </Link>
                     <Link
                       to="/clients"
-                      className="block px-4 py-2 hover:bg-gray-100"
+                      className="block px-4 py-2 hover:text-blue-600"
                     >
                       Our Clients
                     </Link>
                     <Link
                       to="/testimonials"
-                      className="block px-4 py-2 hover:bg-gray-100"
+                      className="block px-4 py-2 hover:text-blue-60"
                     >
                       Testimonials
                     </Link>
@@ -210,16 +211,16 @@ const Header = () => {
                     Blog
                     <span className="ml-1">▼</span>
                   </button>
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
                     <Link
                       to="/blog/standard"
-                      className="block px-4 py-2 hover:bg-gray-100"
+                      className="block px-4 py-2 hover:text-blue-60"
                     >
                       Standard Post
                     </Link>
                     <Link
                       to="/blog/gallery"
-                      className="block px-4 py-2 hover:bg-gray-100"
+                      className="block px-4 py-2 text-red hover:text-blue-60"
                     >
                       Gallery Post
                     </Link>
