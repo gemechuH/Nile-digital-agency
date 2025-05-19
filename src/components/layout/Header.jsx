@@ -90,9 +90,30 @@ const Header = () => {
                 >
                   Projects
                 </Link>
+                <Link
+                  to="/about"
+                  className="block py-2"
+                  onClick={handleLinkClick}
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="/clients"
+                  className="block py-2"
+                  onClick={handleLinkClick}
+                >
+                  Our clients
+                </Link>
+                <Link
+                  to="/testimonials"
+                  className="block py-2"
+                  onClick={handleLinkClick}
+                >
+                  Testimonials
+                </Link>
 
                 {/* Pages Dropdown Mobile */}
-                <button
+                {/* <button
                   onClick={() => toggleDropdown("pages")}
                   className="w-full text-left py-2 flex justify-between items-center"
                 >
@@ -104,8 +125,8 @@ const Header = () => {
                   >
                     ▼
                   </span>
-                </button>
-                {activeDropdown === "pages" && (
+                </button> */}
+                {/* {activeDropdown === "pages" && (
                   <div className="pl-4">
                     <Link
                       to="/about"
@@ -129,7 +150,7 @@ const Header = () => {
                       Testimonials
                     </Link>
                   </div>
-                )}
+                )} */}
 
                 {/* Blog Dropdown Mobile */}
                 {/* <button
@@ -176,9 +197,15 @@ const Header = () => {
                 <Link to="/projects" className={navLinkStyle}>
                   Projects
                 </Link>
-                <Link to='/about' className={navLinkStyle}>About Us</Link>
-                <Link to="/clients" className={navLinkStyle}>Our clients</Link>
-                <Link to="/testimonials" className={navLinkStyle}>Testimonials</Link>
+                <Link to="/about" className={navLinkStyle}>
+                  About Us
+                </Link>
+                <Link to="/clients" className={navLinkStyle}>
+                  Our clients
+                </Link>
+                <Link to="/testimonials" className={navLinkStyle}>
+                  Testimonials
+                </Link>
 
                 {/* Pages Dropdown Desktop */}
                 <div className="relative group">
@@ -186,7 +213,6 @@ const Header = () => {
                     Pages
                     <span className="ml-1">▼</span>
                   </button> */}
-
 
                   {/* <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
                     <Link
