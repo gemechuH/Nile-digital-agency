@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaPhone, FaTelegram } from "react-icons/fa";
+import "../../styles/Header.css"
 
 
 const Header = () => {
@@ -13,6 +14,8 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
   
 
   const toggleDropdown = (dropdown) => {
@@ -20,10 +23,8 @@ const Header = () => {
   };
 
   
-   const navLinkStyle =
-     "text-black hover:text-white font-medium transition-colors duration-300";
-   const mobileDropdownStyle =
-     "pl-4 py-1 text-black hover:text-white block";
+   const navLinkStyle = `nav-link text-white hover:text-blue-200 font-medium transition-colors duration-300`;
+   const mobileDropdownStyle = "pl-4 py-1 text-white hover:text-blue-200 block";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +42,7 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-gradient-to-r from-blue-300 via-indigo-700 to-blue-900 shadow-lg fixed w-full z-50 transition-transform duration-300  ${
+      className={`bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-800 shadow-lg fixed w-full z-50 transition-transform duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -59,15 +60,15 @@ const Header = () => {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-white hover:text-gray-400"
+            className="lg:hidden text-white hover:text-blue-200"
           >
             {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
 
           <div
-            className={`lg:flex lg:items-center lg:space-x-6 text-black  ${
+            className={`lg:flex lg:items-center lg:space-x-6 ${
               isMenuOpen
-                ? "absolute top-full left-0 w-full bg-white shadow-lg bg-gradient-to-r from-blue-300 via-indigo-700 to-blue-900"
+                ? "absolute top-full left-0 w-full bg-blue-900 shadow-lg"
                 : "hidden"
             } lg:relative lg:bg-transparent lg:shadow-none`}
           >
@@ -177,30 +178,69 @@ const Header = () => {
                 </Link>
 
                 {/* Pages Dropdown Desktop */}
-                <div className="relative group">
-                  <button className={`${navLinkStyle} flex items-center`}>
-                    Pages
-                    <span className="ml-1">▼</span>
-                  </button>
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
-                    <Link
-                      to="/about"
-                      className="block px-4 py-2 hover:bg-gray-100"
+                <div className="hidden lg:flex lg:items-center lg:space-x-6">
+                  <Link to="/" className={`nav-link ${navLinkStyle}`}>
+                    Home
+                  </Link>
+                  <Link to="/services" className={`nav-link ${navLinkStyle}`}>
+                    Services
+                  </Link>
+                  <Link to="/projects" className={`nav-link ${navLinkStyle}`}>
+                    Projects
+                  </Link>
+
+                  {/* Update dropdown menus */}
+                  <div className="relative group">
+                    <button
+                      className={`nav-link ${navLinkStyle} flex items-center`}
                     >
-                      About Us
-                    </Link>
-                    <Link
-                      to="/clients"
-                      className="block px-4 py-2 hover:bg-gray-100"
+                      Pages
+                      <span className="ml-1">▼</span>
+                    </button>
+                    <div className="dropdown-menu absolute top-full left-0 mt-2 w-48 rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
+                      <Link
+                        to="/about"
+                        className="dropdown-item block px-4 py-2"
+                      >
+                        About Us
+                      </Link>
+                      <Link
+                        to="/clients"
+                        className="dropdown-item block px-4 py-2"
+                      >
+                        Our Clients
+                      </Link>
+                      <Link
+                        to="/testimonials"
+                        className="dropdown-item block px-4 py-2"
+                      >
+                        Testimonials
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Update Blog dropdown similarly */}
+                  <div className="relative group">
+                    <button
+                      className={`nav-link ${navLinkStyle} flex items-center`}
                     >
-                      Our Clients
-                    </Link>
-                    <Link
-                      to="/testimonials"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Testimonials
-                    </Link>
+                      Blog
+                      <span className="ml-1">▼</span>
+                    </button>
+                    <div className="dropdown-menu absolute top-full left-0 mt-2 w-48 rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
+                      <Link
+                        to="/blog/standard"
+                        className="dropdown-item block px-4 py-2"
+                      >
+                        Standard Post
+                      </Link>
+                      <Link
+                        to="/blog/gallery"
+                        className="dropdown-item block px-4 py-2"
+                      >
+                        Gallery Post
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
@@ -234,19 +274,15 @@ const Header = () => {
               >
                 Contact
               </Link>
-              <Link
-                to="/contact"
-                className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 text-center mt-4 lg:mt-0"
-                onClick={handleLinkClick}
-              >
+              <div className="bg-blue-800/50 text-white px-6 py-2 rounded-full transition-all duration-300 mt-4 lg:mt-0">
                 <a
                   href="tel:+251915137219"
-                  className="flex items-center space-x-2 hover:text-blue-400"
+                  className="flex items-center space-x-2 hover:text-blue-200"
                 >
                   <FaPhone className="text-sm" />
                   <span className="text-sm">+251915137219</span>
                 </a>
-              </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,35 @@
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #93c5fd;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.dropdown-menu {
+  background: rgba(30, 58, 138, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(147, 197, 253, 0.1);
+}
+
+.dropdown-item {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(147, 197, 253, 0.1);
+  color: #93c5fd;
+}
