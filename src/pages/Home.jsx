@@ -127,7 +127,7 @@ const Home = () => {
     {
       name: "Anwar Mohammed",
       role: "CEO & Founder",
-      image: "/assets/team/anwar.jpg",
+      image: "https://niletech.co/wp-content/uploads/2024/09/ANWAR-300x292.jpg",
       quote: "Innovating for Ethiopia's digital future",
     },
     {
@@ -315,7 +315,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text ">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text rounded ">
             OUR 6-D PROCESS
           </h2>
 
@@ -479,22 +479,71 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.youtubeSection}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Latest from Our Channel</h2>
-          <div className={styles.videoWrapper}>
-            <iframe
-              width="914"
-              height="514"
-              src="https://www.youtube.com/embed/HPCW_CSKy3o"
-              title="Our Services at 📲 Nile Technology Solutions"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+      {/* YouTube and CEO Section */}
+      <section className="py-24 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8 }}
+          className="container mx-auto px-4"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text rounded">
+            About Our Leadership
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Video Section */}
+            <div className={styles.videoWrapper}>
+              <iframe
+                src="https://www.youtube.com/embed/HPCW_CSKy3o"
+                title="Our Services at Nile Technology Solutions"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            {/* CEO Information */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+            >
+              <div className="flex items-center space-x-6 mb-6">
+                <div className="relative w-32 h-32 rounded-full overflow-hidden border-2 border-blue-500/30">
+                  <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 animate-pulse">
+                    <img
+                      src="https://niletech.co/wp-content/uploads/2024/09/ANWAR-300x292.jpg"
+                      alt="anwar image"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-2">
+                    Anwar Mohammed
+                  </h3>
+                  <p className="text-blue-400 text-xl">CEO & Founder</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Anwar Mohammed, a visionary tech entrepreneur, founded Nile
+                Digital Agency with the mission to transform Ethiopia's digital
+                landscape. With extensive experience in software development and
+                digital innovation, he leads our team in delivering cutting-edge
+                solutions that empower businesses across Africa.
+              </p>
+              <div className="flex gap-4">
+                <a
+                  href="https://linkedin.com/in/anwarmohammed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 px-4 py-2 rounded-lg transition-all duration-300"
+                >
+                  Connect on LinkedIn →
+                </a>
+              </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

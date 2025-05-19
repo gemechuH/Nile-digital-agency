@@ -21,9 +21,9 @@ const Header = () => {
 
   
    const navLinkStyle =
-     "text-gray-200 hover:text-blue-400 font-medium transition-colors duration-300";
+     "text-black hover:text-white font-medium transition-colors duration-300";
    const mobileDropdownStyle =
-     "pl-4 py-2 text-gray-300 hover:text-blue-400 block";
+     "pl-4 py-1 text-black hover:text-white block";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,7 +65,7 @@ const Header = () => {
           </button>
 
           <div
-            className={`lg:flex lg:items-center lg:space-x-6  ${
+            className={`lg:flex lg:items-center lg:space-x-6 text-black  ${
               isMenuOpen
                 ? "absolute top-full left-0 w-full bg-white shadow-lg bg-gradient-to-r from-blue-300 via-indigo-700 to-blue-900"
                 : "hidden"
@@ -233,6 +233,19 @@ const Header = () => {
                 onClick={handleLinkClick}
               >
                 Contact
+              </Link>
+              <Link
+                to="/contact"
+                className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 text-center mt-4 lg:mt-0"
+                onClick={handleLinkClick}
+              >
+                <a
+                  href="tel:+251915137219"
+                  className="flex items-center space-x-2 hover:text-blue-400"
+                >
+                  <FaPhone className="text-sm" />
+                  <span className="text-sm">+251915137219</span>
+                </a>
               </Link>
             </div>
           </div>

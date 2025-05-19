@@ -1,15 +1,5 @@
 import React, { useState } from "react";
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import {
-  FaPhone,
-  FaEnvelope,
-  FaWhatsapp,
-  FaTelegram,
-  FaLinkedin,
-  FaTwitter,
-  FaInstagram,
-} from "react-icons/fa";
 
 const Contact = () => {
   const [input, setInput] = useState({
@@ -18,10 +8,6 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -74,7 +60,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex-coloumn items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row gap-8">
         {/* Left Side - Inspiring Content */}
         <motion.div
@@ -207,118 +193,6 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <section className="py-16 relative z-10 bg-gradient-to-b from-gray-900/50 to-gray-800/50 backdrop-blur-lg">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8 }}
-          className="container mx-auto px-4"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Get in Touch
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Direct Contact */}
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">
-                Direct Contact
-              </h3>
-
-              <div className="space-y-4">
-                <a
-                  href="tel:+251912345678"
-                  className="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  <FaPhone className="text-xl" />
-                  <span>+251 91 234 5678</span>
-                </a>
-
-                <a
-                  href="mailto:info@niletechnology.com"
-                  className="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  <FaEnvelope className="text-xl" />
-                  <span>info@niletechnology.com</span>
-                </a>
-
-                <a
-                  href="https://wa.me/251912345678"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 text-gray-300 hover:text-green-400 transition-colors"
-                >
-                  <FaWhatsapp className="text-xl" />
-                  <span>WhatsApp Us</span>
-                </a>
-
-                <a
-                  href="https://t.me/niletechnology"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  <FaTelegram className="text-xl" />
-                  <span>Telegram</span>
-                </a>
-              </div>
-            </motion.div>
-
-            {/* Social Media */}
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">
-                Follow Us
-              </h3>
-
-              <div className="grid grid-cols-2 gap-4">
-                <a
-                  href="https://linkedin.com/company/nile-technology"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-gray-300 hover:text-blue-500 transition-colors p-3 rounded-lg hover:bg-gray-700/30"
-                >
-                  <FaLinkedin className="text-2xl" />
-                  <span>LinkedIn</span>
-                </a>
-
-                <a
-                  href="https://twitter.com/niletechnology"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors p-3 rounded-lg hover:bg-gray-700/30"
-                >
-                  <FaTwitter className="text-2xl" />
-                  <span>Twitter</span>
-                </a>
-
-                <a
-                  href="https://instagram.com/niletechnology"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-gray-300 hover:text-pink-500 transition-colors p-3 rounded-lg hover:bg-gray-700/30"
-                >
-                  <FaInstagram className="text-2xl" />
-                  <span>Instagram</span>
-                </a>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors p-3 rounded-lg bg-blue-500/10 hover:bg-blue-500/20"
-                  onClick={() => (window.location.href = "/contact")}
-                >
-                  <span>More Ways →</span>
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
     </div>
   );
 };
