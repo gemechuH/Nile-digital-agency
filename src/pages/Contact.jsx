@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FaPhone, FaEnvelope, FaLinkedin, FaTwitter, FaGithub, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   const [input, setInput] = useState({
@@ -60,11 +61,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 flex items-center justify-center px-4 py-12">
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row gap-8">
         {/* Left Side - Inspiring Content */}
         <motion.div
-          className="lg:w-1/2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-xl p-8 text-white flex flex-col justify-center"
+          className="lg:w-1/2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-xl p-8 text-white flex flex-col justify-center mt-7"
           variants={backgroundVariants}
           animate="animate"
         >
@@ -86,30 +87,85 @@ const Contact = () => {
             Have a project in mind? We're here to turn your ideas into reality.
             Reach out and let's start the journey!
           </motion.p>
+
+          {/* Contact Information */}
           <motion.div
-            className="flex space-x-4"
+            className="space-y-6 mt-8"
             variants={textVariants}
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.4 }}
           >
-            <a
-              href="tel:+1234567890"
-              className="text-white hover:text-blue-200 transition-colors"
-            >
-              +1 (234) 567-890
-            </a>
-            <a
-              href="mailto:hello@niledigital.com"
-              className="text-white hover:text-blue-200 transition-colors"
-            >
-              hello@niledigital.com
-            </a>
+            {/* Address */}
+            <div className="flex items-center space-x-3">
+              <FaMapMarkerAlt className="text-2xl text-blue-200" />
+              <div>
+                <h3 className="font-semibold">Visit Us</h3>
+                <p>Bole - Atlas, Addis Ababa, Ethiopia</p>
+              </div>
+            </div>
+
+            {/* Contact Details */}
+            <div className="flex items-center space-x-3">
+              <FaPhone className="text-2xl text-blue-200" />
+              <div>
+                <h3 className="font-semibold">Call Us</h3>
+                <a
+                  href="tel:+251915137219"
+                  className="hover:text-blue-200 transition-colors"
+                >
+                  +251 915 137 219
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-3">
+              <FaEnvelope className="text-2xl text-blue-200" />
+              <div>
+                <h3 className="font-semibold">Email Us</h3>
+                <a
+                  href="mailto:info@niletech.co"
+                  className="hover:text-blue-200 transition-colors"
+                >
+                  info@niletech.co
+                </a>
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="pt-6 border-t border-white/20">
+              <h3 className="font-semibold mb-4">Connect With Us</h3>
+              <div className="flex space-x-4">
+                <a
+                  href="https://linkedin.com/company/niletech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-all duration-300"
+                >
+                  <FaLinkedin className="text-xl" />
+                </a>
+                <a
+                  href="https://twitter.com/niletechco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-all duration-300"
+                >
+                  <FaTwitter className="text-xl" />
+                </a>
+                <a
+                  href="https://github.com/niletech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-all duration-300"
+                >
+                  <FaGithub className="text-xl" />
+                </a>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
-
         {/* Right Side - Contact Form */}
-        <div className="lg:w-1/2 bg-white rounded-xl shadow-lg p-8">
+        <div className="lg:w-1/2 bg-white rounded-xl shadow-lg p-8 mt-7">
           <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
             Get in Touch
           </h2>

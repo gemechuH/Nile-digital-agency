@@ -17,6 +17,31 @@
 .nav-link.active::after {
   width: 100%;
 }
+.active-link {
+  color: #93c5fd;
+  position: relative;
+}
+
+.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #93c5fd;
+  border-radius: 2px;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
 .dropdown-menu {
   background: rgba(30, 58, 138, 0.95);

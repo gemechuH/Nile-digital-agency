@@ -243,21 +243,25 @@ export default function Projects() {
         </div>
       </div> */}
       {/* Hero */}
-      <section className="bg-gradient-to-r from-indigo-800 to-blue-800 text-white py-24 text-center">
+      <section className=" bg-gradient-to-br from-purple-900 via-gray-900 to-black text-white py-18 text-center">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl font-bold">Our Projects</h1>
-          <p className="mt-4 text-lg max-w-xl mx-auto">
-            Explore how Nile Digital delivers impactful digital solutions.
+          <h1 className="text-5xl font-bold opacity-80">
+            Real-World Solutions We’re Building
+          </h1>
+          <p className="mt-6 text-lg max-w-3xl mx-auto">
+            From ideas to impact — see what we’re building at Nile Digital. We
+            create smart solutions that solve real problems and help businesses
+            grow. Every project shows our commitment to quality and innovation.
           </p>
         </motion.div>
       </section>
 
       {/* Filters */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-2 py-12">
         <div className="flex flex-wrap justify-center gap-4">
           {projectCategories.map((cat) => (
             <button
@@ -266,7 +270,7 @@ export default function Projects() {
               className={`px-6 py-2 rounded-full font-medium text-sm transition-all duration-200 shadow ${
                 selectedCategory === cat
                   ? "bg-blue-600 text-white"
-                  : "bg-white text-gray-800"
+                  : "bg-gray-200 text-gray-800"
               }`}
             >
               {cat}

@@ -38,12 +38,14 @@ const Footer = () => {
                   href="mailto:info@niletechnology.com"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
-                  info@niletechnology.com
+                  info@niletech.co
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <FaMapMarkerAlt className="text-blue-400" />
-                <span className="text-gray-300">Harar, Ethiopia</span>
+                <span className="text-gray-300">
+                  Bole - Atlas, Addis Ababa, Ethiopia
+                </span>
               </li>
               <li className="flex items-center gap-4 mt-4">
                 <a
@@ -74,7 +76,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/services/branding"
+                  to="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Logo & Branding
@@ -82,7 +84,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services/web"
+                  to="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Website Development
@@ -90,7 +92,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services/mobile"
+                  to="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Mobile App Development
@@ -98,23 +100,18 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services/seo"
+                  to="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Search Engine Optimization
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/services/ppc"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Pay-Per-Click
-                </Link>
+                
               </li>
               <li>
                 <Link
-                  to="/services/social"
+                  to="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Social Media Marketing
@@ -163,7 +160,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/careers"
+                  to="/testimonials"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Careers
@@ -187,7 +184,7 @@ const Footer = () => {
                 className="px-4 py-3 rounded-lg bg-gray-800/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-700/50"
               />
               <button
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r text-amber-200 from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
                 type="submit"
               >
                 Subscribe

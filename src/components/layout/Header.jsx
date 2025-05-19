@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaPhone, FaTelegram } from "react-icons/fa";
+import { FaPhone, FaTelegram, FaEnvelope } from "react-icons/fa";
 import '../../styles/header.css'
 
 const Header = () => {
+    const location = useLocation();
   const handleLinkClick = () => {
     setIsMenuOpen(false);
-    setActiveDropdown(null);
+    // setActiveDropdown(null);
   };
-
+  const isActive = (path) => location.pathname === path;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  // const [activeDropdown, setActiveDropdown] = useState(null);
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-  const toggleDropdown = (dropdown) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
+  // const toggleDropdown = (dropdown) => {
+  //   setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  // };
 
-  const navLinkStyle =
-    "text-white hover:text-red font-medium transition-colors duration-300";
-  const mobileDropdownStyle = "pl-4 py-1 text-white hover:text-purple block";
+  const navLinkStyle = (path) => `
+    text-white hover:text-blue-300 font-medium transition-colors duration-300 relative
+    ${isActive(path) ? "active-link" : ""}
+  `;
+  // const mobileDropdownStyle = "pl-4 py-1 text-white hover:text-purple block";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,40 +76,44 @@ const Header = () => {
                   isMenuOpen ? "block" : "hidden"
                 } py-2 px-4`}
               >
-                <Link to="/" className="block py-2" onClick={handleLinkClick}>
+                <Link
+                  to="/"
+                  className={`block py-2 ${isActive("/") ? "active-link" : ""}`}
+                  onClick={handleLinkClick}
+                >
                   Home
                 </Link>
                 <Link
                   to="/services"
-                  className="block py-2"
+                  className={`block py-2 ${isActive("/services") ? "active-link" : ""}`}
                   onClick={handleLinkClick}
                 >
                   Services
                 </Link>
                 <Link
                   to="/projects"
-                  className="block py-2"
+                  className={`block py-2 ${isActive("/services") ? "active-link" : ""}`}
                   onClick={handleLinkClick}
                 >
                   Projects
                 </Link>
                 <Link
                   to="/about"
-                  className="block py-2"
+                  className={`block py-2 ${isActive("/services") ? "active-link" : ""}`}
                   onClick={handleLinkClick}
                 >
                   About Us
                 </Link>
                 <Link
                   to="/clients"
-                  className="block py-2"
+                  className={`block py-2 ${isActive("/services") ? "active-link" : ""}`}
                   onClick={handleLinkClick}
                 >
                   Our clients
                 </Link>
                 <Link
                   to="/testimonials"
-                  className="block py-2"
+                  className={`block py-2 ${isActive("/services") ? "active-link" : ""}`}
                   onClick={handleLinkClick}
                 >
                   Testimonials
@@ -188,33 +195,36 @@ const Header = () => {
 
               {/* Desktop Menu */}
               <div className="hidden lg:flex lg:items-center lg:space-x-6">
-                <Link to="/" className={navLinkStyle}>
+                <Link to="/" className={navLinkStyle("/")}>
                   Home
                 </Link>
-                <Link to="/services" className={navLinkStyle}>
+                <Link to="/services" className={navLinkStyle("/services")}>
                   Services
                 </Link>
-                <Link to="/projects" className={navLinkStyle}>
+                <Link to="/projects" className={navLinkStyle("/projects")}>
                   Projects
                 </Link>
-                <Link to="/about" className={navLinkStyle}>
+                <Link to="/about" className={navLinkStyle("/about")}>
                   About Us
                 </Link>
-                <Link to="/clients" className={navLinkStyle}>
+                <Link to="/clients" className={navLinkStyle("/clients")}>
                   Our clients
                 </Link>
-                <Link to="/testimonials" className={navLinkStyle}>
+                <Link
+                  to="/testimonials"
+                  className={navLinkStyle("/testimonials")}
+                >
                   Testimonials
                 </Link>
 
                 {/* Pages Dropdown Desktop */}
-                <div className="relative group">
-                  {/* <button className={`${navLinkStyle} flex items-center`}>
+                {/* <div className="relative group"> */}
+                {/* <button className={`${navLinkStyle} flex items-center`}>
                     Pages
                     <span className="ml-1">▼</span>
                   </button> */}
 
-                  {/* <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
+                {/* <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
                     <Link
                       to="/about"
                       className="block px-4 py-2 hover:text-blue-600"
@@ -234,7 +244,7 @@ const Header = () => {
                       Testimonials
                     </Link>
                   </div> */}
-                </div>
+                {/* </div> */}
 
                 {/* Blog Dropdown Desktop */}
                 {/* <div className="relative group">
@@ -259,6 +269,17 @@ const Header = () => {
                 </div> */}
               </div>
 
+              <div className="flex flex-col gap-1">
+                <a
+                  href="mailto:info@niletech.co"
+                  className="group flex items-center   py-2 bg-gray-800/50 hover:bg-blue-600/20 rounded-full transition-all duration-300"
+                >
+                  <FaEnvelope className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
+                  <span className="text-sm text-gray-200 group-hover:text-white">
+                    info@niletech.co
+                  </span>
+                </a>
+              </div>
               <Link
                 to="/contact"
                 className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 text-center mt-4 lg:mt-0"
@@ -266,14 +287,6 @@ const Header = () => {
               >
                 Contact
               </Link>
-
-              <a
-                href="tel:+251915137219"
-                className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 text-center mt-4 lg:mt-0 flex items-center space-x-2"
-              >
-                <FaPhone className="text-sm" />
-                <span className="text-sm">+251915137219</span>
-              </a>
             </div>
           </div>
         </div>
