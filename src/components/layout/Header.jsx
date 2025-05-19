@@ -132,7 +132,7 @@ const Header = () => {
                 )}
 
                 {/* Blog Dropdown Mobile */}
-                <button
+                {/* <button
                   onClick={() => toggleDropdown("blog")}
                   className="w-full text-left py-2 flex justify-between items-center"
                 >
@@ -162,7 +162,7 @@ const Header = () => {
                       Gallery Post
                     </Link>
                   </div>
-                )}
+                )} */}
               </div>
 
               {/* Desktop Menu */}
@@ -176,14 +176,19 @@ const Header = () => {
                 <Link to="/projects" className={navLinkStyle}>
                   Projects
                 </Link>
+                <Link to='/about' className={navLinkStyle}>About Us</Link>
+                <Link to="/clients" className={navLinkStyle}>Our clients</Link>
+                <Link to="/testimonials" className={navLinkStyle}>Testimonials</Link>
 
                 {/* Pages Dropdown Desktop */}
                 <div className="relative group">
-                  <button className={`${navLinkStyle} flex items-center`}>
+                  {/* <button className={`${navLinkStyle} flex items-center`}>
                     Pages
                     <span className="ml-1">▼</span>
-                  </button>
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
+                  </button> */}
+
+
+                  {/* <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
                     <Link
                       to="/about"
                       className="block px-4 py-2 hover:text-blue-600"
@@ -202,11 +207,11 @@ const Header = () => {
                     >
                       Testimonials
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Blog Dropdown Desktop */}
-                <div className="relative group">
+                {/* <div className="relative group">
                   <button className={`${navLinkStyle} flex items-center`}>
                     Blog
                     <span className="ml-1">▼</span>
@@ -225,7 +230,7 @@ const Header = () => {
                       Gallery Post
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <Link
