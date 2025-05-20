@@ -163,7 +163,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600  bg-clip-text animate-gradient text-white">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16  bg-clip-text animate-gradient text-white">
             Digital Solutions for You
           </h2>
 
@@ -241,7 +241,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600 text-white bg-clip-text rounded">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16  text-white bg-clip-text rounded">
             Our Impact in Numbers
           </h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -318,7 +318,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600 text-white bg-clip-text rounded ">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16  text-white bg-clip-text rounded ">
             OUR 6-D PROCESS
           </h2>
 
@@ -444,7 +444,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600 bg-clip-text">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white  bg-clip-text">
             Meet Our Team
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
