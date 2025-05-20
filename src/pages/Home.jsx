@@ -241,9 +241,20 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600 text-white bg-clip-text rounded">
-            Our Impact in Numbers
-          </h2>
+          <section className="text-center px-4 md:px-12 py-12 bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900 text-white rounded-lg shadow-xl">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-md">
+              Digital Growth by the Digits
+            </h2>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-200 leading-relaxed">
+              Discover the real impact of our work through key metrics that
+              reflect our dedication, innovation, and progress. These numbers
+              highlight how{" "}
+              <span className="text-cyan-300 font-semibold">Nile Digital</span>{" "}
+              is helping clients grow, connect, and succeed in the digital
+              space.
+            </p>
+          </section>
+
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
