@@ -144,7 +144,7 @@ const Services = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-gray-900 to-black py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-3xl sm:text-4xl font-bold bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-4 mt-4">
+          <h1 className="text-3xl sm:text-4xl font-bold bg-clip-text  mb-4 mt-4 text-white">
             Digital Services That Drive Growth.
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">

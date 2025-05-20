@@ -163,7 +163,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600  bg-clip-text animate-gradient text-white">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16  bg-clip-text animate-gradient text-white">
             Digital Solutions for You
           </h2>
 
@@ -241,6 +241,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
+
           <section className="text-center px-4 md:px-12 py-12 bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900 text-white rounded-lg shadow-xl">
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-md">
               Digital Growth by the Digits
@@ -254,6 +255,11 @@ const Home = () => {
               space.
             </p>
           </section>
+
+
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16  text-white bg-clip-text rounded">
+            Our Impact in Numbers
+          </h2>
 
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <motion.div
@@ -329,7 +335,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600 text-white bg-clip-text rounded ">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16  text-white bg-clip-text rounded ">
             OUR 6-D PROCESS
           </h2>
 
@@ -455,7 +461,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 via-blue-500 to-yellow-600 bg-clip-text">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white  bg-clip-text">
             Meet Our Team
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
