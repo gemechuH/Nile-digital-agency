@@ -163,9 +163,24 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16  bg-clip-text animate-gradient text-white">
-            Digital Solutions for You
-          </h2>
+          <section
+            className={`${styles.cta} ${isVisible ? styles.visible : ""}`}
+          >
+            <div className={styles.container}>
+              <h2 className="text-4xl font-bold mb-4">
+                Digital Solutions for You
+              </h2>
+              <p className="text-lg mb-6 ">
+                From smart websites to powerful digital tools, we build
+                innovative solutions tailored to your business goals. At{" "}
+                <span className="text-cyan-300 font-semibold">
+                  Nile Digital
+                </span>
+                , we turn ideas into impact and help you thrive in the digital
+                world.
+              </p>
+            </div>
+          </section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -241,25 +256,25 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-
-          <section className="text-center px-4 md:px-12 py-12 bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900 text-white rounded-lg shadow-xl">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-md">
-              Digital Growth by the Digits
-            </h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-200 leading-relaxed">
-              Discover the real impact of our work through key metrics that
-              reflect our dedication, innovation, and progress. These numbers
-              highlight how{" "}
-              <span className="text-cyan-300 font-semibold">Nile Digital</span>{" "}
-              is helping clients grow, connect, and succeed in the digital
-              space.
-            </p>
+          <section
+            className={`${styles.cta} ${isVisible ? styles.visible : ""}`}
+          >
+            <div className={styles.container}>
+              <h2 className="text-4xl font-bold mb-4">
+                Digital Growth by the Digits
+              </h2>
+              <p className="text-lg mb-6 ">
+                Discover the real impact of our work through key metrics that
+                reflect our dedication, innovation, and progress. These numbers
+                highlight how{" "}
+                <span className="text-cyan-300 font-semibold">
+                  Nile Digital
+                </span>{" "}
+                is helping clients grow, connect, and succeed in the digital
+                space.
+              </p>
+            </div>
           </section>
-
-
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16  text-white bg-clip-text rounded">
-            Our Impact in Numbers
-          </h2>
 
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <motion.div
@@ -335,9 +350,20 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16  text-white bg-clip-text rounded ">
-            OUR 6-D PROCESS
-          </h2>
+          <section
+            className={`${styles.cta} ${isVisible ? styles.visible : ""}`}
+          >
+            <div className={styles.container}>
+              <h2 className="text-4xl font-bold mb-4">
+                Our 6-Step Journey to Building Great Digital Solutions
+              </h2>
+              <p className="text-lg mb-6 ">
+                From understanding your goals to delivering the final product,
+                our 6-step process ensures every project is clear, creative, and
+                results-driven.
+              </p>
+            </div>
+          </section>
 
           <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
@@ -454,16 +480,34 @@ const Home = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 relative z-10">
+      <section className="py-18 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white  bg-clip-text">
-            Meet Our Team
-          </h2>
+          <section
+            className={`${styles.cta} ${isVisible ? styles.visible : ""}`}
+          >
+            <div className={styles.container}>
+              <h2 className="text-4xl font-bold mb-4">
+                Here’s the Team You’ll Love Working With
+              </h2>
+              <p className="text-lg mb-6 ">
+                Behind every successful project is a passionate team. Meet the
+                talented minds at
+                <span className="text-cyan-300 font-semibold">
+                  {" "}
+                  Nile Digital
+                </span>{" "}
+                — developers, designers, and strategists dedicated to bringing
+                your vision to life. We don’t just work for you, we work with
+                you, turning collaboration into lasting impact.
+              </p>
+            </div>
+          </section>
+
           <div className="grid md:grid-cols-2 gap-8">
             {team.map((member, index) => (
               <motion.div
