@@ -48,6 +48,27 @@ const CarouselEffect = () => {
         dynamicHeight={false}
         className={classes.carousel}
         transitionTime={500}
+        preventMovementUntilSwipeScrollTolerance={true}
+        swipeScrollTolerance={50}
+        useKeyboardArrows={true}
+        renderArrowPrev={(clickHandler, hasPrev) => (
+          <button
+            onClick={clickHandler}
+            className={`${classes.arrowButton} ${classes.prevButton}`}
+            style={{ display: hasPrev ? "block" : "none" }}
+          >
+            ‹
+          </button>
+        )}
+        renderArrowNext={(clickHandler, hasNext) => (
+          <button
+            onClick={clickHandler}
+            className={`${classes.arrowButton} ${classes.nextButton}`}
+            style={{ display: hasNext ? "block" : "none" }}
+          >
+            ›
+          </button>
+        )}
       >
         {slides.map((slide, index) => (
           <div key={index} className={classes.slide}>
@@ -66,7 +87,6 @@ const CarouselEffect = () => {
                 </h2>
                 <h3 className="text-3xl text-white md:text-5xl p-6 font-bold mb-6 text-center">
                   Transforming Ideas into Digital Reality
-                  
                 </h3>
                 <p className={classes.description}>{slide.description}</p>
                 <button className={classes.aboutButton}>{slide.aboutUs}</button>

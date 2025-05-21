@@ -7,6 +7,31 @@
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-y: contain;
 }
+.arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.arrowButton:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}
 .ctaButton {
   padding: 15px 30px;
   font-size: 1.1rem;
