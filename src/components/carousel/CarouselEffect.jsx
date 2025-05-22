@@ -43,10 +43,10 @@ const CarouselEffect = () => {
         showStatus={false}
         interval={5000}
         stopOnHover={false}
-        swipeable={true}
-        emulateTouch={true}
+        swipeable={false}
+        emulateTouch={false}
         dynamicHeight={false}
-        className={classes.carousel}
+        className={`${classes.carousel} touch-none`}
         transitionTime={500}
         preventMovementUntilSwipeScrollTolerance={true}
         swipeScrollTolerance={50}

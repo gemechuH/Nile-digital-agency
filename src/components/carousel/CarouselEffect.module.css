@@ -3,9 +3,7 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-y: contain;
+  touch-action: none
 }
 .arrowButton {
   position: absolute;
@@ -47,6 +45,9 @@
   box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
   animation: pulse 2s infinite;
 }
+.fixed-height {
+  height: 100vh;
+  max-height: 800px;
 
 .carousel {
   height: 100vh;
@@ -58,6 +59,7 @@
 .slide {
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 .titleText {
   display: inline-block;
@@ -78,9 +80,10 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.4);
-  /* display: flex;
+  display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
+    padding: 1rem;
 }
 
 .title {
