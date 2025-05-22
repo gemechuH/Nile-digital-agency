@@ -153,8 +153,12 @@ const Home = () => {
   ];
 
   return (
-    <div className={styles.homePage}>
-      <CarouselEffect />
+    <div
+      className={`${styles.homePage} relative min-h-screen overflow-x-hidden`}
+    >
+      <div className="relative h-screen md:h-auto">
+        <CarouselEffect />
+      </div>
 
       <section ref={ref} className="py-24 relative z-10">
         <motion.div
