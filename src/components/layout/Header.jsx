@@ -218,13 +218,13 @@ const Header = () => {
                 </Link>
 
                 {/* Pages Dropdown Desktop */}
-                {/* <div className="relative group"> */}
-                {/* <button className={`${navLinkStyle} flex items-center`}>
+                <div className="relative group">
+                <button className={`${navLinkStyle} flex items-center`}>
                     Pages
                     <span className="ml-1">▼</span>
-                  </button> */}
+                  </button>
 
-                {/* <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
+                <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
                     <Link
                       to="/about"
                       className="block px-4 py-2 hover:text-blue-600"
@@ -237,14 +237,14 @@ const Header = () => {
                     >
                       Our Clients
                     </Link>
-                    <Link
+                    {/* <Link
                       to="/testimonials"
                       className="block px-4 py-2 hover:text-blue-60"
                     >
                       Testimonials
-                    </Link>
-                  </div> */}
-                {/* </div> */}
+                    </Link> */}
+                  </div>
+                </div>
 
                 {/* Blog Dropdown Desktop */}
                 {/* <div className="relative group">

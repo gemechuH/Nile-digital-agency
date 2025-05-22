@@ -141,7 +141,7 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-gray-900 to-black py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-gray-900 to-black py-25 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-3xl sm:text-4xl font-bold bg-clip-text  mb-4 mt-4 text-white">
