@@ -243,7 +243,7 @@ export default function Projects() {
         </div>
       </div> */}
       {/* Hero */}
-      <section className=" bg-gradient-to-br from-purple-900 via-gray-900 to-black text-white py-18 text-center">
+      <section className=" bg-gradient-to-br from-purple-900 via-gray-900 to-black text-white py-30 text-center">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
