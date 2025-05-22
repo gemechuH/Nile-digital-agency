@@ -1,7 +1,7 @@
 .homePage {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to bottom, #111827, #1f2937);
+  /* background: linear-gradient(to bottom, #111827, #1f2937); */
   min-height: 100vh;
 }
 .youtubeSection {

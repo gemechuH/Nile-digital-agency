@@ -33,6 +33,7 @@ import {
 import { BiCodeAlt } from "react-icons/bi";
 import { MdDesignServices } from "react-icons/md";
 import { Link } from "react-router-dom";
+import AnimatedBackground from "../components/carousel/animated/AnimatedBackground";
 
 
 const Home = () => {
@@ -154,13 +155,15 @@ const Home = () => {
 
   return (
     <div
-      className={`${styles.homePage} relative min-h-screen`}
+      className={`${styles.homePage} relative min-h-screen bg-gradient-to-b from-gray-900 to-gray-800`}
     >
       <div className="relative">
         <CarouselEffect />
       </div>
 
       <section ref={ref} className="py-24 relative z-10">
+        <AnimatedBackground />
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -254,6 +257,7 @@ const Home = () => {
         ref={statsRef}
         className="py-14 relative z-10 bg-gradient-to-b from-gray-900/50 to-gray-800/50 backdrop-blur-lg"
       >
+        <AnimatedBackground />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -348,6 +352,7 @@ const Home = () => {
       </section>
 
       <section className="py-24 relative z-10 bg-gradient-to-b from-gray-900/50 to-gray-800/50 backdrop-blur-lg">
+        <AnimatedBackground />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -485,6 +490,7 @@ const Home = () => {
 
       {/* Team Section */}
       <section className="py-18 relative z-10">
+        <AnimatedBackground />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -562,6 +568,7 @@ const Home = () => {
             </div>
 
             {/* CEO Information */}
+            <AnimatedBackground />
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
