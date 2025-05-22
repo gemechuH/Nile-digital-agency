@@ -72,7 +72,11 @@ const CarouselEffect = () => {
       >
         {slides.map((slide, index) => (
           <div key={index} className={classes.slide}>
-            alt={`Carousel slide for ${slide.lang} language`}
+            <img
+              src={slide.image}
+              alt={`slide-${index}`}
+              className={classes.image}
+            />
             <div className={classes.overlay}>
               <div className={classes.content}>
                 <h3 className={classes.greeting}>{slide.greating}</h3>
