@@ -48,7 +48,7 @@
 .fixed-height {
   height: 100vh;
   max-height: 800px;
-
+}
 .carousel {
   height: 100vh;
   touch-action: pan-x;
@@ -58,8 +58,7 @@
 
 .slide {
   height: 100vh;
-  position: relative;
-  overflow: hidden;
+  
 }
 .titleText {
   display: inline-block;
@@ -75,15 +74,12 @@
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .title {
@@ -130,10 +126,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; */
-  width: 100%;
+    max-height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px; */
 }
 .aboutButton {
   background: transparent;

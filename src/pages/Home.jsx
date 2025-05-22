@@ -154,9 +154,9 @@ const Home = () => {
 
   return (
     <div
-      className={`${styles.homePage} relative min-h-screen overflow-x-hidden`}
+      className={`${styles.homePage} relative min-h-screen`}
     >
-      <div className="relative h-screen md:h-auto">
+      <div className="relative">
         <CarouselEffect />
       </div>
 

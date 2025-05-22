@@ -34,7 +34,7 @@ const CarouselEffect = () => {
   ];
 
   return (
-    <div className={classes.carousel_container}>
+    <div className="h-[90vh] md:h-screen relative overflow-hidden">
       <Carousel
         autoPlay={true}
         infiniteLoop={true}
@@ -46,29 +46,8 @@ const CarouselEffect = () => {
         swipeable={false}
         emulateTouch={false}
         dynamicHeight={false}
-        className={`${classes.carousel} touch-none`}
+        className="h-full"
         transitionTime={500}
-        preventMovementUntilSwipeScrollTolerance={true}
-        swipeScrollTolerance={50}
-        useKeyboardArrows={true}
-        renderArrowPrev={(clickHandler, hasPrev) => (
-          <button
-            onClick={clickHandler}
-            className={`${classes.arrowButton} ${classes.prevButton}`}
-            style={{ display: hasPrev ? "block" : "none" }}
-          >
-            ‹
-          </button>
-        )}
-        renderArrowNext={(clickHandler, hasNext) => (
-          <button
-            onClick={clickHandler}
-            className={`${classes.arrowButton} ${classes.nextButton}`}
-            style={{ display: hasNext ? "block" : "none" }}
-          >
-            ›
-          </button>
-        )}
       >
         {slides.map((slide, index) => (
           <div key={index} className={classes.slide}>
