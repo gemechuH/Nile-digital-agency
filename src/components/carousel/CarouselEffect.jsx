@@ -60,15 +60,15 @@ const CarouselEffect = () => {
             ‹
           </button>
         )}
-        renderArrowNext={(clickHandler, hasNext) => (
-          <button
-            onClick={clickHandler}
-            className={`${classes.arrowButton} ${classes.nextButton}`}
-            style={{ display: hasNext ? "block" : "none" }}
-          >
-            ›
-          </button>
-        )}
+        // renderArrowNext={(clickHandler, hasNext) => (
+        //   <button
+        //     onClick={clickHandler}
+        //     className={`${classes.arrowButton} ${classes.nextButton}`}
+        //     style={{ display: hasNext ? "block" : "none" }}
+        //   >
+        //     ›
+        //   </button>
+        // )}
       >
         {slides.map((slide, index) => (
           <div key={index} className={classes.slide}>
@@ -79,7 +79,7 @@ const CarouselEffect = () => {
             />
             <div className={classes.overlay}>
               <div className={classes.content}>
-                <h3 className={classes.greeting}>{slide.greating}</h3>
+                <h3 className={`${classes.greeting}`}>{slide.greating}</h3>
                 <h2 className={classes.title}>
                   <span className={classes.titleText}>NILE</span>{" "}
                   <span className={classes.titleText}>TECHNOLOGY</span>{" "}
@@ -89,11 +89,15 @@ const CarouselEffect = () => {
                   Transforming Ideas into Digital Reality
                 </h3>
                 <p className={classes.description}>{slide.description}</p>
-                {/* <button className={classes.aboutButton}>{slide.aboutUs}</button>
-                <Link to="/contact">
-                  {" "}
-                  <button className={classes.ctaButton}>Get Started</button>
-                </Link> */}
+                <div className="flex gap-2">
+                  <button className={classes.aboutButton}>
+                    {slide.aboutUs}
+                  </button>
+                  <Link to="/contact">
+                    {" "}
+                    <button className={`${classes.ctaButton} sm:font-medium p-4`}>Get Started</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
