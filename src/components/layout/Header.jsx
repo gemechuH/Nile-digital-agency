@@ -218,7 +218,7 @@ const Header = () => {
                 </Link>
 
                 {/* Pages Dropdown Desktop */}
-                <div className="relative group">
+                {/* <div className="relative group">
                 <button className={`${navLinkStyle} flex items-center`}>
                     Pages
                     <span className="ml-1">▼</span>
@@ -237,14 +237,15 @@ const Header = () => {
                     >
                       Our Clients
                     </Link>
-                    <Link
+                    {/* <Link
                       to="/testimonials"
                       className="block px-4 py-2 hover:text-blue-60"
                     >
                       Testimonials
-                    </Link>
-                  </div>
-                </div>
+                    </Link> */}
+                  {/* </div>
+                </div> */}
+
                 {/* Blog Dropdown Desktop */}
                 {/* <div className="relative group">
                   <button className={`${navLinkStyle} flex items-center`}>
