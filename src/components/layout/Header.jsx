@@ -72,125 +72,74 @@ const Header = () => {
             <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-6">
               {/* Mobile Menu */}
               <div
-                className={`lg:hidden ${
-                  isMenuOpen ? "block" : "hidden"
-                } py-2 px-4`}
+                className={`lg:hidden ${isMenuOpen ? "block" : "hidden"} py-2 px-4`}
               >
                 <Link
                   to="/"
-                  className={`block py-2 ${isActive("/") ? "active-link" : ""}`}
+                  className={`block py-2 ${
+                    isActive("/")
+                      ? "text-blue-400 border-l-4 border-blue-400 pl-2"
+                      : "text-white pl-3"
+                  } hover:text-blue-300 transition-colors duration-300`}
                   onClick={handleLinkClick}
                 >
                   Home
                 </Link>
                 <Link
                   to="/services"
-                  className={`block py-2 ${isActive("/services") ? "active-link" : ""}`}
+                  className={`block py-2 ${
+                    isActive("/services")
+                      ? "text-blue-400 border-l-4 border-blue-400 pl-2"
+                      : "text-white pl-3"
+                  } hover:text-blue-300 transition-colors duration-300`}
                   onClick={handleLinkClick}
                 >
                   Services
                 </Link>
                 <Link
                   to="/projects"
-                  className={`block py-2 ${isActive("/services") ? "active-link" : ""}`}
+                  className={`block py-2 ${
+                    isActive("/projects")
+                      ? "text-blue-400 border-l-4 border-blue-400 pl-2"
+                      : "text-white pl-3"
+                  } hover:text-blue-300 transition-colors duration-300`}
                   onClick={handleLinkClick}
                 >
                   Projects
                 </Link>
                 <Link
                   to="/about"
-                  className={`block py-2 ${isActive("/services") ? "active-link" : ""}`}
+                  className={`block py-2 ${
+                    isActive("/about")
+                      ? "text-blue-400 border-l-4 border-blue-400 pl-2"
+                      : "text-white pl-3"
+                  } hover:text-blue-300 transition-colors duration-300`}
                   onClick={handleLinkClick}
                 >
                   About Us
                 </Link>
                 <Link
                   to="/clients"
-                  className={`block py-2 ${isActive("/services") ? "active-link" : ""}`}
+                  className={`block py-2 ${
+                    isActive("/clients")
+                      ? "text-blue-400 border-l-4 border-blue-400 pl-2"
+                      : "text-white pl-3"
+                  } hover:text-blue-300 transition-colors duration-300`}
                   onClick={handleLinkClick}
                 >
                   Our clients
                 </Link>
                 <Link
                   to="/testimonials"
-                  className={`block py-2 ${isActive("/services") ? "active-link" : ""}`}
+                  className={`block py-2 ${
+                    isActive("/testimonials")
+                      ? "text-blue-400 border-l-4 border-blue-400 pl-2"
+                      : "text-white pl-3"
+                  } hover:text-blue-300 transition-colors duration-300`}
                   onClick={handleLinkClick}
                 >
                   Testimonials
                 </Link>
-
-                {/* Pages Dropdown Mobile */}
-                {/* <button
-                  onClick={() => toggleDropdown("pages")}
-                  className="w-full text-left py-2 flex justify-between items-center"
-                >
-                  Pages
-                  <span
-                    className={`transform transition-transform ${
-                      activeDropdown === "pages" ? "rotate-180" : ""
-                    }`}
-                  >
-                    ▼
-                  </span>
-                </button> */}
-                {/* {activeDropdown === "pages" && (
-                  <div className="pl-4">
-                    <Link
-                      to="/about"
-                      className={mobileDropdownStyle}
-                      onClick={handleLinkClick}
-                    >
-                      About Us
-                    </Link>
-                    <Link
-                      to="/clients"
-                      className={mobileDropdownStyle}
-                      onClick={handleLinkClick}
-                    >
-                      Our Clients
-                    </Link>
-                    <Link
-                      to="/testimonials"
-                      className={mobileDropdownStyle}
-                      onClick={handleLinkClick}
-                    >
-                      Testimonials
-                    </Link>
-                  </div>
-                )} */}
-
-                {/* Blog Dropdown Mobile */}
-                {/* <button
-                  onClick={() => toggleDropdown("blog")}
-                  className="w-full text-left py-2 flex justify-between items-center"
-                >
-                  Blog
-                  <span
-                    className={`transform transition-transform ${
-                      activeDropdown === "blog" ? "rotate-180" : ""
-                    }`}
-                  >
-                    ▼
-                  </span>
-                </button>
-                {activeDropdown === "blog" && (
-                  <div className="pl-4">
-                    <Link
-                      to="/blog/standard"
-                      className={mobileDropdownStyle}
-                      onClick={handleLinkClick}
-                    >
-                      Standard Post
-                    </Link>
-                    <Link
-                      to="/blog/gallery"
-                      className={mobileDropdownStyle}
-                      onClick={handleLinkClick}
-                    >
-                      Gallery Post
-                    </Link>
-                  </div>
-                )} */}
               </div>
 
               {/* Desktop Menu */}
@@ -216,57 +165,6 @@ const Header = () => {
                 >
                   Testimonials
                 </Link>
-
-                {/* Pages Dropdown Desktop */}
-                {/* <div className="relative group">
-                <button className={`${navLinkStyle} flex items-center`}>
-                    Pages
-                    <span className="ml-1">▼</span>
-                  </button>
-
-                <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
-                    <Link
-                      to="/about"
-                      className="block px-4 py-2 hover:text-blue-600"
-                    >
-                      About Us
-                    </Link>
-                    <Link
-                      to="/clients"
-                      className="block px-4 py-2 hover:text-blue-600"
-                    >
-                      Our Clients
-                    </Link>
-                    {/* <Link
-                      to="/testimonials"
-                      className="block px-4 py-2 hover:text-blue-60"
-                    >
-                      Testimonials
-                    </Link> */}
-                  {/* </div>
-                </div> */}
-
-                {/* Blog Dropdown Desktop */}
-                {/* <div className="relative group">
-                  <button className={`${navLinkStyle} flex items-center`}>
-                    Blog
-                    <span className="ml-1">▼</span>
-                  </button>
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg shadow-xl py-2 invisible group-hover:visible transition-all duration-300">
-                    <Link
-                      to="/blog/standard"
-                      className="block px-4 py-2 hover:text-blue-60"
-                    >
-                      Standard Post
-                    </Link>
-                    <Link
-                      to="/blog/gallery"
-                      className="block px-4 py-2 text-red hover:text-blue-60"
-                    >
-                      Gallery Post
-                    </Link>
-                  </div>
-                </div> */}
               </div>
 
               <div className="flex flex-col gap-1">

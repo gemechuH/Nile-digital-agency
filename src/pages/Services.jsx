@@ -70,8 +70,7 @@ const services = [
     title: "Social Media Marketing",
     description:
       "Strategic social media campaigns that build brand awareness and engage your target audience across platforms.",
-    image:
-      "https://images.unsplash.com/photo-1562577309-2592ab84b1bc?ixlib=rb-4.0.3",
+    
     image:
       "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3",
     icon: "📱",
@@ -88,6 +87,7 @@ const services = [
 ];
 
 const ServiceCard = ({ service, onClick }) => (
+
   <div
     className="service-card group relative overflow-hidden rounded-2xl p-6 bg-white/10 backdrop-blur-lg border border-white/20 hover:bg-white/95 transition-all duration-300 ease-in-out cursor-pointer"
     onClick={() => onClick(service)}

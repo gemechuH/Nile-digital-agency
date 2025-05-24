@@ -27,7 +27,7 @@ const CarouselEffect = () => {
       image: imgs[2],
       greating: "BAGA NAGAAN DHUFTAN",
       description:
-        "Sammuu irraa gara ijaarsaatti akka deemtan isin gargaarra",
+        "Dijitaalaa waliin Jajjaboo Guddadhu.Furmaata amala ta'e kan keessan guddisuuf hojjetame",
       aboutUs: "Waa'ee Keenya",
       lang: "Afaan Oromo",
     },
@@ -107,14 +107,16 @@ const CarouselEffect = () => {
                   {slide.description}
                 </p>
                 <div className="flex flex-col md:flex-row gap-4 justify-center mt-4 md:mt-8">
-                  <button
-                    className={`${classes.aboutButton} px-6 py-2 md:py-3 text-sm md:text-base`}
-                  >
-                    {slide.aboutUs}
-                  </button>
+                  <Link to="/about">
+                    <button
+                      className={`${classes.aboutButton} w-full px-8 py-3 text-sm md:text-base font-semibold rounded-full transition-all duration-300 transform hover:scale-80 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]`}
+                    >
+                      {slide.aboutUs}
+                    </button>
+                  </Link>
                   <Link to="/contact">
                     <button
-                      className={`${classes.ctaButton} px-6 py-2 md:py-3 text-sm md:text-base`}
+                      className={`${classes.ctaButton} w-full px-6 py-3 text-sm md:text-base font-semibold rounded-full transition-all duration-300 transform hover:scale-80 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]`}
                     >
                       Get Started
                     </button>

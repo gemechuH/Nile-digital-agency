@@ -136,13 +136,13 @@ const Home = () => {
     {
       name: "Abdulmenan Ahmed",
       role: "Technical Director",
-      image: "/assets/team/abdulmenan.jpg",
+      image: "https://niletech.co/wp-content/uploads/2024/09/ANWAR-300x292.jpg",
       quote: "Building tomorrow's technology today",
     },
     {
       name: "Abdulfetah Jemal(AJ)",
       role: "CTO and Co-Founder",
-      image: "/assets/team/abdulmenan.jpg",
+      image: "https://niletech.co/wp-content/uploads/2024/09/ANWAR-300x292.jpg",
       quote: "Building tomorrow's technology today",
     },
     {

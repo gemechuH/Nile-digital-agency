@@ -17,7 +17,7 @@ const About = () => {
     {
       name: "Anwar Mohammed",
       role: "CEO & Founder",
-      image: "/assets/images/team/member1.jpg",
+      image: "/assets/image/AN.jpg",
       description:
         "Leads the company's strategic vision and fosters a culture of innovation and growth.",
     },
@@ -160,7 +160,7 @@ const About = () => {
           initial="hidden"
           animate="visible"
           variants={fadeIn}
-          className="bg-blue-600 rounded-lg p-12"
+          className="bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-lg p-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Start Your Digital Journey?
