@@ -184,7 +184,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://linkedin.com/company/niletechnology"
+              href="https://www.linkedin.com/company/niletech1"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600"
