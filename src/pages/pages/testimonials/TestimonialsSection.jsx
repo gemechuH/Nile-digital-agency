@@ -50,44 +50,27 @@ const testimonialData = [
   },
 ];
 
+// ... imports remain the same ...
+
 const TestimonialsSection = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-      <section className={css.section__container}>
-       
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute bg-blue-500 rounded-full opacity-10"
-              style={{
-                width: Math.random() * 100 + 50,
-                height: Math.random() * 100 + 50,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                x: [0, Math.random() * 100 - 50],
-                y: [0, Math.random() * 100 - 50],
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                duration: 10 + Math.random() * 10,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-            />
-          ))}
-        </div>
-
-        <h1 className="text-white">What our customers say</h1>
-        <h2 className="text-white">Testimonials</h2>
-        <div className={css.section__grid}>
+    <section className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white py-10 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">What our customers say</h1>
+        <h2 className="text-xl md:text-2xl text-center mb-12 text-gray-300">Testimonials</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {testimonialData.map((testimonial, index) => (
-            <TestimonialCard key={index} {...testimonial} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <TestimonialCard {...testimonial} />
+            </motion.div>
           ))}
         </div>
-      </section>
+      </div>
     </section>
   );
 };
