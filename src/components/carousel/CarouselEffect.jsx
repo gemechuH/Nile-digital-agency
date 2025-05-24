@@ -38,7 +38,7 @@ const CarouselEffect = () => {
       <Carousel
         autoPlay={true}
         infiniteLoop={true}
-        showIndicators={true}
+        showIndicators={false}
         showThumbs={false}
         showStatus={false}
         interval={5000}
@@ -50,7 +50,7 @@ const CarouselEffect = () => {
         transitionTime={500}
         preventMovementUntilSwipeScrollTolerance={true}
         swipeScrollTolerance={50}
-        useKeyboardArrows={true}
+        useKeyboardArrows={false}
         renderArrowPrev={(clickHandler, hasPrev) => (
           <button
             onClick={clickHandler}
@@ -83,12 +83,16 @@ const CarouselEffect = () => {
             <div
               className={`${classes.overlay} flex items-center justify-center px-4 md:px-8`}
             >
-              <div className={`${classes.content} max-w-4xl mx-auto`}>
-                <h3 className={`${classes.greeting} text-lg md:text-2xl mb-2`}>
+              <div
+                className={`${classes.content} max-w-4xl mx-auto space-y-2 md:space-y-4`}
+              >
+                <h3
+                  className={`${classes.greeting} text-lg md:text-2xl font-semibold tracking-wider`}
+                >
                   {slide.greating}
                 </h3>
                 <h2
-                  className={`${classes.title} text-2xl md:text-4xl lg:text-5xl mb-4`}
+                  className={`${classes.title} text-2xl md:text-4xl lg:text-5xl mt-1 md:mt-2`}
                 >
                   <span className={classes.titleText}>NILE</span>{" "}
                   <span className={classes.titleText}>TECHNOLOGY</span>{" "}
