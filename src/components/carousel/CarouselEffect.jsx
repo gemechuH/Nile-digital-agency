@@ -27,7 +27,7 @@ const CarouselEffect = () => {
       image: imgs[2],
       greating: "BAGA NAGAAN DHUFTAN",
       description:
-        "Sammuu irraa gara ijaarsaatti akka deemtan isin gargaarra — saffisaa fi bu’a qabeessa ta’een. Meeshaalee, garee fi yaada sirrii ta’een yaadni kee furmaata dijitaalaa dhugaa, itti fayyadamuuf qophaa’e ta’a.",
+        "Sammuu irraa gara ijaarsaatti akka deemtan isin gargaarra",
       aboutUs: "Waa'ee Keenya",
       lang: "Afaan Oromo",
     },
