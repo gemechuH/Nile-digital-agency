@@ -11,7 +11,7 @@ const CarouselEffect = () => {
       image: imgs[0],
       greating: "WELCOME TO",
       description:
-        "Digitalize your business with internationally validated solutions designed not only for efficiency and sustainability of operational processes, but also for scalability, growth, and alignment with your business priorities. Stop adapting to software, let the software adapt to you.",
+        "We help you go from brainstorming to building — fast and effectively.With the right tools, team, and mindset, your ideas become real, ready-to-use digital solutions.",
       aboutUs: "About Us",
       lang: "English",
     },
@@ -19,7 +19,7 @@ const CarouselEffect = () => {
       image: imgs[1],
       greating: "እንኳን በደህና መጡ",
       description:
-        "በአለም አቀፍ ደረጃ በተረጋገጡ መፍትሄዎች የንግድዎን ዲጂታላይዝ ያድርጉ፣ የተነደፉት ለስራ ሂደቶች ብቻ ሳይሆን ለእድገት፣ ለማስፋፋት እና ከንግድዎ ቅድሚያዎች ጋር ለማጣጣም ነው። ለሶፍትዌር መላመድ ያቁሙ፣ ሶፍትዌሩ ለእርስዎ ይላመድ።",
+        "ከአእምሮ ማጎልበት ወደ ግንባታ እንዲሄዱ እንረዳዎታለን - ፈጣን እና ውጤታማ። በትክክለኛ መሳሪያዎች፣ ቡድን እና አስተሳሰብ፣ ሃሳቦችዎ እውን ይሆናሉ፣ ለመጠቀም ዝግጁ የሆኑ ዲጂታል መፍትሄዎች።",
       aboutUs: "ስለ እኛ",
       lang: "Amharic",
     },
@@ -27,7 +27,7 @@ const CarouselEffect = () => {
       image: imgs[2],
       greating: "BAGA NAGAAN DHUFTAN",
       description:
-        "Daldalaa keessan furtuuwwan idil-addunyaatti mirkanaawaniin diijitaalaayizii godhaa, kan dizaayinii isaanii kan hojii adeemsa qofaaf osoo hin taane, guddina, bal'ina fi sagantaa daldala keessanii waliin wal simsiisuu dha. Softweeriif of madaqsuun dhaabaa, softweerin isin haa madaqu.",
+        "Sammuu irraa gara ijaarsaatti akka deemtan isin gargaarra — saffisaa fi bu’a qabeessa ta’een. Meeshaalee, garee fi yaada sirrii ta’een yaadni kee furmaata dijitaalaa dhugaa, itti fayyadamuuf qophaa’e ta’a.",
       aboutUs: "Waa'ee Keenya",
       lang: "Afaan Oromo",
     },
