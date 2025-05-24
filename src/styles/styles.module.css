@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #149e9e;
+   --primary-color: #202C47;
   --secondary-color: #e8e8e8;
   /* --text-dark: #0f172a; */
   --text-light: #94a3b8;
@@ -20,7 +20,7 @@
 .section__container {
   max-width: 1200px;
   margin: auto;
-  padding: 2rem 1rem;
+    padding: 6rem 1rem 2rem;
   text-align: center;
 }
 
