@@ -60,42 +60,60 @@ const CarouselEffect = () => {
             ‹
           </button>
         )}
-        // renderArrowNext={(clickHandler, hasNext) => (
-        //   <button
-        //     onClick={clickHandler}
-        //     className={`${classes.arrowButton} ${classes.nextButton}`}
-        //     style={{ display: hasNext ? "block" : "none" }}
-        //   >
-        //     ›
-        //   </button>
-        // )}
+        renderArrowNext={(clickHandler, hasNext) => (
+          <button
+            onClick={clickHandler}
+            className={`${classes.arrowButton} ${classes.nextButton}`}
+            style={{ display: hasNext ? "block" : "none" }}
+          >
+            ›
+          </button>
+        )}
       >
         {slides.map((slide, index) => (
-          <div key={index} className={classes.slide}>
+          <div
+            key={index}
+            className={`${classes.slide} min-h-[100vh] md:min-h-[80vh]`}
+          >
             <img
               src={slide.image}
               alt={`slide-${index}`}
-              className={classes.image}
+              className={`${classes.image} object-cover w-full h-full`}
             />
-            <div className={classes.overlay}>
-              <div className={classes.content}>
-                <h3 className={`${classes.greeting}`}>{slide.greating}</h3>
-                <h2 className={classes.title}>
+            <div
+              className={`${classes.overlay} flex items-center justify-center px-4 md:px-8`}
+            >
+              <div className={`${classes.content} max-w-4xl mx-auto`}>
+                <h3 className={`${classes.greeting} text-lg md:text-2xl mb-2`}>
+                  {slide.greating}
+                </h3>
+                <h2
+                  className={`${classes.title} text-2xl md:text-4xl lg:text-5xl mb-4`}
+                >
                   <span className={classes.titleText}>NILE</span>{" "}
                   <span className={classes.titleText}>TECHNOLOGY</span>{" "}
                   <span className={classes.titleText}>SOLUTIONS</span>
                 </h2>
-                <h3 className="text-3xl text-white md:text-5xl p-6 font-bold mb-6 text-center">
+                <h3 className="text-xl md:text-3xl lg:text-5xl p-2 md:p-6 font-bold mb-4 md:mb-6 text-center text-white">
                   Transforming Ideas into Digital Reality
                 </h3>
-                <p className={classes.description}>{slide.description}</p>
-                <div className="flex gap-2">
-                  <button className={classes.aboutButton}>
+                <p
+                  className={`${classes.description} text-sm md:text-base lg:text-lg px-4 md:px-8 max-w-3xl mx-auto mb-8`}
+                >
+                  {slide.description}
+                </p>
+                <div className="flex flex-col md:flex-row gap-4 justify-center mt-4 md:mt-8">
+                  <button
+                    className={`${classes.aboutButton} px-6 py-2 md:py-3 text-sm md:text-base`}
+                  >
                     {slide.aboutUs}
                   </button>
                   <Link to="/contact">
-                    {" "}
-                    <button className={`${classes.ctaButton} sm:font-medium p-4`}>Get Started</button>
+                    <button
+                      className={`${classes.ctaButton} px-6 py-2 md:py-3 text-sm md:text-base`}
+                    >
+                      Get Started
+                    </button>
                   </Link>
                 </div>
               </div>
