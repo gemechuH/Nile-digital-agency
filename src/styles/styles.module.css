@@ -1,14 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
-   --primary-color: #202C47;
+  --primary-color: #202C47;
   --secondary-color: #e8e8e8;
-  /* --text-dark: #0f172a; */
   --text-light: #94a3b8;
   --white: #ffffff;
 }
-
-
 
 #root {
   max-width: 1280px;
@@ -20,7 +17,7 @@
 .section__container {
   max-width: 1200px;
   margin: auto;
-    padding: 8rem 1rem 2rem;
+  padding: 6rem 1rem 2rem;
   text-align: center;
 }
 
@@ -28,7 +25,6 @@
   font-size: 1.5rem;
   margin-top: 2rem;
   font-weight: 600;
-  /* color: var(--primary-color); */
 }
 
 .section__container h1 {
@@ -37,19 +33,7 @@
   margin-top: 1rem;
   font-size: 2.5rem;
   font-weight: 600;
-  /* color: var(--text-dark); */
 }
-
-/* .section__container h1::after {
-  position: absolute;
-  content: "";
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  height: 2px;
-  width: 5rem;
-  background-color: var(--primary-color);
-} */
 
 .section__grid {
   display: flex;
@@ -88,6 +72,7 @@
   aspect-ratio: 1;
   border-radius: 100%;
   background-color: var(--primary-color);
+  opacity: 0.9;
   z-index: -1;
   transition: 0.5s;
 }
@@ -139,7 +124,8 @@
 }
 
 .section__card:hover::before {
-  width: 400%;
+  width: 300%;
+  opacity: 1;
 }
 
 .section__card:hover :is(h4, h5) {
@@ -152,4 +138,69 @@
 
 .section__card:hover img {
   border-color: var(--white);
+}
+
+/* ---------------------- */
+/*      Responsive CSS    */
+/* ---------------------- */
+@media (max-width: 1024px) {
+  .section__card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .section__container h1 {
+    font-size: 2rem;
+  }
+
+  .section__container h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__card {
+    flex: 0 0 100%;
+  }
+
+  .section__container {
+    padding: 4rem 1rem 2rem;
+  }
+
+  .section__card {
+    padding: 4rem 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section__container h1 {
+    font-size: 1.75rem;
+  }
+
+  .section__container h2 {
+    font-size: 1.125rem;
+  }
+
+  .section__card h4 {
+    font-size: 1.25rem;
+  }
+
+  .section__card h5 {
+    font-size: 1rem;
+  }
+
+  .section__card h6 {
+    font-size: 0.9rem;
+  }
+
+  .section__card p {
+    font-size: 0.95rem;
+  }
+
+  .section__card span {
+    font-size: 2.5rem;
+  }
+
+  .section__card img {
+    max-width: 80px;
+  }
 }
