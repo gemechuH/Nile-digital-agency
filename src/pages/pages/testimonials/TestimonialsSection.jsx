@@ -54,30 +54,7 @@ const TestimonialsSection = () => {
   return (
     <section className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       <section className={css.section__container}>
-        <div className="absolute inset-0 min-h-screen overflow-hidden bg-gray-900">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10"
-              style={{
-                width: Math.random() * 300 + 100,
-                height: Math.random() * 300 + 100,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -100, 0],
-                x: [0, Math.random() * 50 - 25, 0],
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                duration: Math.random() * 10 + 20,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-          ))}
-        </div>
+
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_, i) => (
             <motion.div
